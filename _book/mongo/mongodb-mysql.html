@@ -1,0 +1,1815 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2 数据操作 · 数据库操作指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjunbo">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mongodb-grammar.html" />
+    
+    
+    <link rel="prev" href="mongo-auth.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    1.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../mysql/mysql-windos-install.html">
+            
+                <a href="../mysql/mysql-windos-install.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    1.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../mysql/mysql-ubuntu-install.html">
+            
+                <a href="../mysql/mysql-ubuntu-install.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    1.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../mysql/mysql-centos-install.html">
+            
+                <a href="../mysql/mysql-centos-install.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    1.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../mysql/mysql-introduction.html">
+            
+                <a href="../mysql/mysql-introduction.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    1.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../mysql/mysql-sqlparse.html">
+            
+                <a href="../mysql/mysql-sqlparse.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    1.2.1 解析过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../mysql/mysql-dml.html">
+            
+                <a href="../mysql/mysql-dml.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    1.2.2 DML语言 增删改语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../mysql/mysql-dql.html">
+            
+                <a href="../mysql/mysql-dql.html">
+            
+                    
+                        <b>1.2.2.3.</b>
+                    
+                    1.2.3 DQL语言 基础查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../mysql/mysql-dql-join.html">
+            
+                <a href="../mysql/mysql-dql-join.html">
+            
+                    
+                        <b>1.2.2.4.</b>
+                    
+                    1.2.4 DQL语言 关联查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../mysql/mysql-dql-son.html">
+            
+                <a href="../mysql/mysql-dql-son.html">
+            
+                    
+                        <b>1.2.2.5.</b>
+                    
+                    1.2.5 DQL语言 联合分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../mysql/mysql-ddl.html">
+            
+                <a href="../mysql/mysql-ddl.html">
+            
+                    
+                        <b>1.2.2.6.</b>
+                    
+                    1.2.6 DDL语言 库表管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../mysql/mysql-dcl.html">
+            
+                <a href="../mysql/mysql-dcl.html">
+            
+                    
+                        <b>1.2.2.7.</b>
+                    
+                    1.2.7 DCL语言 权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="../mysql/mysql-tcl.html">
+            
+                <a href="../mysql/mysql-tcl.html">
+            
+                    
+                        <b>1.2.2.8.</b>
+                    
+                    1.2.8 TCL语言 事务并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="../mysql/mysql-index.html">
+            
+                <a href="../mysql/mysql-index.html">
+            
+                    
+                        <b>1.2.2.9.</b>
+                    
+                    1.2.9 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="../mysql/mysql-master-slave.html">
+            
+                <a href="../mysql/mysql-master-slave.html">
+            
+                    
+                        <b>1.2.2.10.</b>
+                    
+                    1.2.10 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="../mysql/mysql-compare-one.html">
+            
+                <a href="../mysql/mysql-compare-one.html">
+            
+                    
+                        <b>1.2.2.11.</b>
+                    
+                    1.2.11 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="../mysql/mysql-compare-two.html">
+            
+                <a href="../mysql/mysql-compare-two.html">
+            
+                    
+                        <b>1.2.2.12.</b>
+                    
+                    1.2.12 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="../mysql/mysql-backup-recovery.html">
+            
+                <a href="../mysql/mysql-backup-recovery.html">
+            
+                    
+                        <b>1.2.2.13.</b>
+                    
+                    1.2.13 备份恢复 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    1.3 pymysql操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../mysql/pymysql-base.html">
+            
+                <a href="../mysql/pymysql-base.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    1.3.1 pymysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../mysql/pymysql-aiomysql.html">
+            
+                <a href="../mysql/pymysql-aiomysql.html">
+            
+                    
+                        <b>1.2.3.2.</b>
+                    
+                    1.3.2 aiomysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../mysql/pymysql-dbutils.html">
+            
+                <a href="../mysql/pymysql-dbutils.html">
+            
+                    
+                        <b>1.2.3.3.</b>
+                    
+                    1.3.3 DBUtils 连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../mysql/pymysql-pool.html">
+            
+                <a href="../mysql/pymysql-pool.html">
+            
+                    
+                        <b>1.2.3.4.</b>
+                    
+                    1.3.4 DBUtils 高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../mysql/peewee-introduction.html">
+            
+                <a href="../mysql/peewee-introduction.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    1.4 peewee
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../mysql/peewee-model.html">
+            
+                <a href="../mysql/peewee-model.html">
+            
+                    
+                        <b>1.2.4.1.</b>
+                    
+                    1.4.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../mysql/peewee-connect.html">
+            
+                <a href="../mysql/peewee-connect.html">
+            
+                    
+                        <b>1.2.4.2.</b>
+                    
+                    1.4.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../mysql/peewee-insert.html">
+            
+                <a href="../mysql/peewee-insert.html">
+            
+                    
+                        <b>1.2.4.3.</b>
+                    
+                    1.4.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../mysql/peewee-delete.html">
+            
+                <a href="../mysql/peewee-delete.html">
+            
+                    
+                        <b>1.2.4.4.</b>
+                    
+                    1.4.4 delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../mysql/peewee-update.html">
+            
+                <a href="../mysql/peewee-update.html">
+            
+                    
+                        <b>1.2.4.5.</b>
+                    
+                    1.4.5 update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../mysql/peewee-select.html">
+            
+                <a href="../mysql/peewee-select.html">
+            
+                    
+                        <b>1.2.4.6.</b>
+                    
+                    1.4.6 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../mysql/peewee-web.html">
+            
+                <a href="../mysql/peewee-web.html">
+            
+                    
+                        <b>1.2.4.7.</b>
+                    
+                    1.4.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../mysql/sqlalchemy-introduction.html">
+            
+                <a href="../mysql/sqlalchemy-introduction.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    2.5 SQLAlchemy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../mysql/sqlalchemy-model.html">
+            
+                <a href="../mysql/sqlalchemy-model.html">
+            
+                    
+                        <b>1.2.5.1.</b>
+                    
+                    1.5.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../mysql/sqlalchemy-connect.html">
+            
+                <a href="../mysql/sqlalchemy-connect.html">
+            
+                    
+                        <b>1.2.5.2.</b>
+                    
+                    1.5.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../mysql/sqlalchemy-insert.html">
+            
+                <a href="../mysql/sqlalchemy-insert.html">
+            
+                    
+                        <b>1.2.5.3.</b>
+                    
+                    1.5.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../mysql/sqlalchemy-select.html">
+            
+                <a href="../mysql/sqlalchemy-select.html">
+            
+                    
+                        <b>1.2.5.4.</b>
+                    
+                    1.5.4 select 其一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../mysql/sqlalchemy-fix-select.html">
+            
+                <a href="../mysql/sqlalchemy-fix-select.html">
+            
+                    
+                        <b>1.2.5.5.</b>
+                    
+                    1.5.5 select 其二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../mysql/sqlalchemy-flask.html">
+            
+                <a href="../mysql/sqlalchemy-flask.html">
+            
+                    
+                        <b>1.2.5.6.</b>
+                    
+                    1.5.6 flask-sqlalchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../mysql/sqlalchemy-web.md">
+            
+                <span>
+            
+                    
+                        <b>1.2.5.7.</b>
+                    
+                    1.5.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../redis/redis-introduction.html">
+            
+                <a href="../redis/redis-introduction.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../redis/redis-install.html">
+            
+                <a href="../redis/redis-install.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    2.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../redis/redis-windos-install.html">
+            
+                <a href="../redis/redis-windos-install.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    2.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../redis/redis-ubuntu-install.html">
+            
+                <a href="../redis/redis-ubuntu-install.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    2.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../redis/redis-centos-install.html">
+            
+                <a href="../redis/redis-centos-install.html">
+            
+                    
+                        <b>1.3.1.3.</b>
+                    
+                    2.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../redis/redis-config.html">
+            
+                <a href="../redis/redis-config.html">
+            
+                    
+                        <b>1.3.1.4.</b>
+                    
+                    2.1.4 配置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../redis/redis-usage.html">
+            
+                <a href="../redis/redis-usage.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    2.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../redis/redis-string.html">
+            
+                <a href="../redis/redis-string.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    2.2.1 string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../redis/redis-key.html">
+            
+                <a href="../redis/redis-key.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    2.2.2 key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../redis/redis-hash.html">
+            
+                <a href="../redis/redis-hash.html">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    2.2.3 hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../redis/redis-list.html">
+            
+                <a href="../redis/redis-list.html">
+            
+                    
+                        <b>1.3.2.4.</b>
+                    
+                    2.2.4 list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../redis/redis-set.html">
+            
+                <a href="../redis/redis-set.html">
+            
+                    
+                        <b>1.3.2.5.</b>
+                    
+                    2.2.5 set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../redis/redis-zset.html">
+            
+                <a href="../redis/redis-zset.html">
+            
+                    
+                        <b>1.3.2.6.</b>
+                    
+                    2.2.6 zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../redis/redis-bitmaps.html">
+            
+                <a href="../redis/redis-bitmaps.html">
+            
+                    
+                        <b>1.3.2.7.</b>
+                    
+                    2.2.7 bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../redis/redis-python.html">
+            
+                <a href="../redis/redis-python.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    2.3. python-redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../redis/redis-python-str.html">
+            
+                <a href="../redis/redis-python-str.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    2.3.1 redis-str
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../redis/redis-python-key.html">
+            
+                <a href="../redis/redis-python-key.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    2.3.2 redis-key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../redis/redis-python-hash.html">
+            
+                <a href="../redis/redis-python-hash.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    2.3.3 redis-hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../redis/redis-python-list.html">
+            
+                <a href="../redis/redis-python-list.html">
+            
+                    
+                        <b>1.3.3.4.</b>
+                    
+                    2.3.4 redis-list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../redis/redis-python-set.html">
+            
+                <a href="../redis/redis-python-set.html">
+            
+                    
+                        <b>1.3.3.5.</b>
+                    
+                    2.3.5 redis-set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../redis/redis-python-zset.html">
+            
+                <a href="../redis/redis-python-zset.html">
+            
+                    
+                        <b>1.3.3.6.</b>
+                    
+                    2.3.6 redis-zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../redis/redis-python-hyperlog.html">
+            
+                <a href="../redis/redis-python-hyperlog.html">
+            
+                    
+                        <b>1.3.3.7.</b>
+                    
+                    2.3.7 redis-hyperlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../redis/redis-python-example.html">
+            
+                <a href="../redis/redis-python-example.html">
+            
+                    
+                        <b>1.3.3.8.</b>
+                    
+                    2.3.8 应用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../redis/redis-python-strict.html">
+            
+                <a href="../redis/redis-python-strict.html">
+            
+                    
+                        <b>1.3.3.9.</b>
+                    
+                    2.3.9 Redis与StrictRedis区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../redis/reids-senior-problem.html">
+            
+                <a href="../redis/reids-senior-problem.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    2.4. 应用场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../redis/redis-master-slave.html">
+            
+                <a href="../redis/redis-master-slave.html">
+            
+                    
+                        <b>1.3.4.1.</b>
+                    
+                    2.3.1 主从读分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../redis/redis-application.html">
+            
+                <a href="../redis/redis-application.html">
+            
+                    
+                        <b>1.3.4.2.</b>
+                    
+                    2.3.2 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../redis/redis-scene.html">
+            
+                <a href="../redis/redis-scene.html">
+            
+                    
+                        <b>1.3.4.3.</b>
+                    
+                    2.3.3 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="SUMMARY.html">
+            
+                <a href="SUMMARY.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    3.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="mongo-windos-install.html">
+            
+                <a href="mongo-windos-install.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    3.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="mongo-ubuntu-install.html">
+            
+                <a href="mongo-ubuntu-install.html">
+            
+                    
+                        <b>1.4.1.2.</b>
+                    
+                    3.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="mongo-centos-install.html">
+            
+                <a href="mongo-centos-install.html">
+            
+                    
+                        <b>1.4.1.3.</b>
+                    
+                    3.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="mongo-auth.html">
+            
+                <a href="mongo-auth.html">
+            
+                    
+                        <b>1.4.1.4.</b>
+                    
+                    3.1.4 权限分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="mongodb-mysql.html">
+            
+                <a href="mongodb-mysql.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    3.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="mongodb-grammar.html">
+            
+                <a href="mongodb-grammar.html">
+            
+                    
+                        <b>1.4.2.1.</b>
+                    
+                    3.2.1 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="mongodb-index.html">
+            
+                <a href="mongodb-index.html">
+            
+                    
+                        <b>1.4.2.2.</b>
+                    
+                    3.2.2 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="mongodb-export.html">
+            
+                <a href="mongodb-export.html">
+            
+                    
+                        <b>1.4.2.3.</b>
+                    
+                    3.2.3 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="pymongo.html">
+            
+                <a href="pymongo.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    3.3 pymongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="mongoengine.html">
+            
+                <a href="mongoengine.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    3.4 mongoengine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="mongoengine-connect.html">
+            
+                <a href="mongoengine-connect.html">
+            
+                    
+                        <b>1.4.4.1.</b>
+                    
+                    3.4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="mongoengine-documents.html">
+            
+                <a href="mongoengine-documents.html">
+            
+                    
+                        <b>1.4.4.2.</b>
+                    
+                    3.4.2 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="mongoengine-document-instances.html">
+            
+                <a href="mongoengine-document-instances.html">
+            
+                    
+                        <b>1.4.4.3.</b>
+                    
+                    3.4.3 应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.Elasticsearch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../elasticsearch/elasticsearch-connect.html">
+            
+                <a href="../elasticsearch/elasticsearch-connect.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    4.1 基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2 数据操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E94;&#x7528;&#x573A;&#x666F;&#x5206;&#x6790;">&#x5E94;&#x7528;&#x573A;&#x666F;&#x5206;&#x6790;</h1>
+<h4 id="&#x4E00;&#x3001;-mysql&#x4E0E;mongodb&#x7B80;&#x5355;&#x5BF9;&#x6BD4;">&#x4E00;&#x3001; MySQL&#x4E0E;MongoDB&#x7B80;&#x5355;&#x5BF9;&#x6BD4;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</th>
+<th>MySQL</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;</td>
+<td>&#x5173;&#x7CFB;&#x578B;</td>
+<td>&#x975E;&#x5173;&#x7CFB;&#x578B;</td>
+</tr>
+<tr>
+<td>&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</td>
+<td>&#x4E0D;&#x540C;&#x7684;&#x5F15;&#x64CE;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</td>
+<td>&#x865A;&#x62DF;&#x5185;&#x5B58;+&#x6301;&#x4E45;&#x5316;</td>
+</tr>
+<tr>
+<td>&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</td>
+<td>&#x4F20;&#x7EDF;&#x7684;SQL&#x8BED;&#x53E5;</td>
+<td>&#x72EC;&#x7279;&#x7684;MongoDB&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>&#x67B6;&#x6784;&#x7279;&#x70B9;</td>
+<td>&#x5E38;&#x89C1;&#x6709;&#x5355;&#x8282;&#x70B9;&#xFF0C; M-S, MHA, MMM, cluster &#x7B49;&#x67B6;&#x6784;</td>
+<td>&#x901A;&#x8FC7;&#x526F;&#x672C;&#x96C6;&#xFF0C;&#x4EE5;&#x53CA;&#x5206;&#x7247;&#x6765;&#x5B9E;&#x73B0;&#x9AD8;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>&#x6570;&#x636E;&#x5904;&#x7406;&#x65B9;&#x5F0F;</td>
+<td>&#x4E0D;&#x540C;&#x7684;&#x5F15;&#x64CE;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7279;&#x70B9;</td>
+<td>&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#xFF0C;&#x5C06;&#x70ED;&#x6570;&#x636E;&#x5B58;&#x5728;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x9AD8;&#x901F;&#x8BFB;&#x5199;</td>
+</tr>
+<tr>
+<td>&#x6210;&#x719F;&#x5EA6;</td>
+<td>&#x62E5;&#x6709;&#x8F83;&#x4E3A;&#x6210;&#x719F;&#x7684;&#x4F53;&#x7CFB;&#xFF0C;&#x6210;&#x719F;&#x5EA6;&#x8F83;&#x9AD8;</td>
+<td>&#x65B0;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6210;&#x719F;&#x5EA6;&#x8F83;&#x4F4E;</td>
+</tr>
+<tr>
+<td>&#x5E7F;&#x6CDB;&#x5EA6;</td>
+<td>&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EFD;&#x989D;&#x4E0D;&#x65AD;&#x589E;&#x52A0;&#xFF0C;MySQL&#x4EFD;&#x989D;&#x4E5F;&#x4E0D;&#x77ED;&#x589E;&#x52A0;</td>
+<td>Nosql&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;MongoDB&#x8F83;&#x4E3A;&#x5B8C;&#x5584;&#xFF0C;&#x4F7F;&#x7528;&#x4EBA;&#x6570;&#x4E5F;&#x4E0D;&#x77ED;&#x589E;&#x52A0;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x4E8C;&#x3001;mongodb&#x4F18;&#x70B9;">&#x4E8C;&#x3001;MongoDB&#x4F18;&#x70B9;</h4>
+<ul>
+<li><font color="red"><b>&#x5FEB;&#x901F;! </b></font>&#x62E5;&#x6709;&#x9002;&#x91CF;&#x7EA7;&#x5185;&#x5B58;&#x7684;Mongodb&#x7684;&#x6027;&#x80FD;&#x662F;&#x975E;&#x5E38;&#x8FC5;&#x901F;&#x7684;&#xFF0C;&#x5B83;&#x5C06;&#x70ED;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E2D;(&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x7D22;&#x5F15;&#x548C;&#x5C11;&#x90E8;&#x5206;&#x6570;&#x636E;)&#xFF0C;&#x4F7F;&#x5F97;&#x70ED;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x53D8;&#x5F97;&#x5341;&#x5206;&#x5FEB;&#x901F;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x4E86;&#x6574;&#x4F53;&#x7684;&#x901F;&#x5EA6;&#x4E0E;&#x6548;&#x7387;</li>
+<li><font color="red"><b>&#x9AD8;&#x6269;&#x5C55;&#x6027;&#xFF01;</b></font>Mongodb&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x4E0E;&#x96C6;&#x7FA4;&#x67B6;&#x6784;&#x62E5;&#x6709;&#x5341;&#x5206;&#x9AD8;&#x7684;&#x6269;&#x5C55;&#x6027;&#xFF0C;&#x901A;&#x8FC7;&#x7269;&#x7406;&#x673A;&#x5668;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x4EE5;&#x53CA;sharding&#x7684;&#x589E;&#x52A0;&#xFF0C;Mongodb&#x7684;&#x6269;&#x5C55;&#x5C06;&#x8FBE;&#x5230;&#x4E00;&#x4E2A;&#x5341;&#x5206;&#x60CA;&#x4EBA;&#x7684;&#x5730;&#x6B65;</li>
+<li><font color="red"><b>&#x81EA;&#x8EAB;&#x7684;Failover&#x673A;&#x5236;&#xFF01;</b></font>Mongodb&#x7684;&#x526F;&#x672C;&#x96C6;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x5F53;&#x4E3B;&#x5E93;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x526F;&#x672C;&#x96C6;&#x5C06;&#x9009;&#x4E3E;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4E3B;&#x5E93;&#x6765;&#x7EE7;&#x7EED;&#x63D0;&#x4F9B;&#x670D;&#x52A1;</li>
+<li><font color="red"><b>Json&#x7684;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF01;</b></font>Mongodb&#x7684;Json&#x4E0E;Bson&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x5341;&#x5206;&#x9002;&#x5408;&#x6587;&#x6863;&#x683C;&#x5F0F;&#x7684;&#x5B58;&#x50A8;&#x4E0E;&#x67E5;&#x8BE2;&#x3002; </li>
+</ul>
+<h4 id="&#x4E09;&#x3001;mongodb&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;">&#x4E09;&#x3001;MongoDB&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</h4>
+<ul>
+<li><p><font color="red"><b>&#x8868;&#x7ED3;&#x6784;&#x4E0D;&#x660E;&#x786E;&#x4E14;&#x6570;&#x636E;&#x4E0D;&#x65AD;&#x53D8;&#x5927; </b></font>
+MongoDB&#x662F;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x6587;&#x6863;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6269;&#x5C55;&#x5B57;&#x6BB5;&#x5F88;&#x5BB9;&#x6613;&#x4E14;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6709;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5185;&#x5BB9;&#x7BA1;&#x7406;&#x6216;&#x8005;&#x535A;&#x5BA2;&#x5E73;&#x53F0;&#x7B49; &#x4F8B;&#x5982;&#x5708;&#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B58;&#x50A8;&#x7528;&#x6237;&#x8BC4;&#x8BBA;&#x4E4B;&#x7C7B;&#x7684;</p>
+</li>
+<li><p><font color="red"><b>&#x66F4;&#x9AD8;&#x7684;&#x5199;&#x5165;&#x8D1F;&#x8F7D; </b></font>
+MongoDB&#x4FA7;&#x91CD;&#x9AD8;&#x6570;&#x636E;&#x5199;&#x5165;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x800C;&#x975E;&#x4E8B;&#x52A1;&#x5B89;&#x5168;&#xFF0C;&#x9002;&#x5408;&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x4E2D;&#x6709;&#x5927;&#x91CF;&#x201C;&#x4F4E;&#x4EF7;&#x503C;&#x201D;&#x6570;&#x636E;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x672C;&#x8EAB;&#x5B58;&#x7684;&#x5C31;&#x662F;json&#x683C;&#x5F0F;&#x6570;&#x636E; &#x4F8B;&#x5982;&#x505A;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF; </p>
+</li>
+<li><p><font color="red"><b>&#x6570;&#x636E;&#x91CF;&#x5F88;&#x5927;&#x6216;&#x8005;&#x5C06;&#x6765;&#x4F1A;&#x53D8;&#x5F97;&#x5F88;&#x5927; </b></font>
+Mysql&#x5355;&#x8868;&#x6570;&#x636E;&#x91CF;&#x8FBE;&#x5230;5-10G&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x660E;&#x7EC6;&#x7684;&#x6027;&#x80FD;&#x964D;&#x7EA7;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x6570;&#x636E;&#x7684;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x62C6;&#x5206;&#x3001;&#x5E93;&#x7684;&#x62C6;&#x5206;&#x5B8C;&#x6210;&#x6269;&#x5C55;</p>
+<p>MongoDB&#x5185;&#x5EFA;&#x4E86;sharding&#x3001;&#x5F88;&#x591A;&#x6570;&#x636E;&#x5206;&#x7247;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5BB9;&#x6613;&#x6C34;&#x5E73;&#x6269;&#x5C55;&#xFF0C;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x9002;&#x5E94;&#x5927;&#x6570;&#x636E;&#x91CF;&#x589E;&#x957F;&#x7684;&#x9700;&#x6C42;&#x3002; </p>
+</li>
+<li><p><font color="red"><b>&#x9AD8;&#x53EF;&#x7528;&#x6027; </b></font>
+&#x81EA;&#x5E26;&#x9AD8;&#x53EF;&#x7528;&#xFF0C;&#x81EA;&#x52A8;&#x4E3B;&#x4ECE;&#x5207;&#x6362;&#xFF08;&#x526F;&#x672C;&#x96C6;&#xFF09;</p>
+</li>
+<li><p><font color="red"><b>&#x4E0D;&#x9002;&#x7528;&#x7684;&#x573A;&#x666F; </b></font>
+MongoDB&#x4E0D;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E8B;&#x52A1;&#x7684;&#x5E94;&#x7528;&#x5EFA;&#x8BAE;&#x4E0D;&#x7528;MongoDB
+MongoDB&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;join&#x64CD;&#x4F5C;&#xFF0C;&#x9700;&#x8981;&#x590D;&#x6742;&#x67E5;&#x8BE2;&#x7684;&#x5E94;&#x7528;&#x4E5F;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;MongoDB</p>
+</li>
+</ul>
+<h4 id="&#x56DB;&#x3001;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x548C;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5BF9;&#x6BD4;">&#x56DB;&#x3001;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x548C;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5BF9;&#x6BD4;</h4>
+<ul>
+<li><p><font color="red"><b>&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x9002;&#x5408;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;</b></font>&#xFF0C;&#x5982;&#x7528;&#x6237;&#x7684;&#x5E10;&#x53F7;&#x3001;&#x5730;&#x5740;</p>
+<p>1&#xFF09;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x901A;&#x5E38;&#x9700;&#x8981;&#x505A;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#xFF0C;&#x6BD4;&#x5982;join&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x8981;&#x80DC;&#x51FA;&#x4E00;&#x7B79; </p>
+<p>2&#xFF09;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7684;&#x89C4;&#x6A21;&#x3001;&#x589E;&#x957F;&#x7684;&#x901F;&#x5EA6;&#x901A;&#x5E38;&#x662F;&#x53EF;&#x4EE5;&#x9884;&#x671F;&#x7684; </p>
+<p>3&#xFF09;&#x4E8B;&#x52A1;&#x6027;&#x3001;&#x4E00;&#x81F4;&#x6027; </p>
+</li>
+<li><p><font color="red"><b>NoSQL&#x9002;&#x5408;&#x5B58;&#x50A8;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;</b></font>&#xFF0C;&#x5982;&#x6587;&#x7AE0;&#x3001;&#x8BC4;&#x8BBA;&#xFF1A; </p>
+<p>1&#xFF09;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x6A21;&#x7CCA;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x5168;&#x6587;&#x641C;&#x7D22;&#x3001;&#x673A;&#x5668;&#x5B66;&#x4E60; </p>
+<p>2&#xFF09;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x662F;&#x6D77;&#x91CF;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x589E;&#x957F;&#x7684;&#x901F;&#x5EA6;&#x662F;&#x96BE;&#x4EE5;&#x9884;&#x671F;&#x7684;&#xFF0C; </p>
+<p>3&#xFF09;&#x6839;&#x636E;&#x6570;&#x636E;&#x7684;&#x7279;&#x70B9;&#xFF0C;NoSQL&#x6570;&#x636E;&#x5E93;&#x901A;&#x5E38;&#x5177;&#x6709;&#x65E0;&#x9650;&#xFF08;&#x81F3;&#x5C11;&#x63A5;&#x8FD1;&#xFF09;&#x4F38;&#x7F29;&#x6027; </p>
+<p>4&#xFF09;&#x6309;key&#x83B7;&#x53D6;&#x6570;&#x636E;&#x6548;&#x7387;&#x5F88;&#x9AD8;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;join&#x6216;&#x5176;&#x4ED6;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#x7684;&#x652F;&#x6301;&#x5C31;&#x6BD4;&#x8F83;&#x5DEE;</p>
+</li>
+</ul>
+<h4 id="&#x4E94;&#x3001;mysql&#x4E0E;mongodb&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x53C8;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x9009;&#x62E9;&#x5462;">&#x4E94;&#x3001;MySQL&#x4E0E;MongoDB&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x53C8;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x9009;&#x62E9;&#x5462;</h4>
+<ul>
+<li><p><font color="red"><b>&#x76F8;&#x6BD4;&#x8F83;MySQL&#xFF0C;MongoDB&#x6570;&#x636E;&#x5E93;&#x66F4;&#x9002;&#x5408;&#x90A3;&#x4E9B;&#x8BFB;&#x4F5C;&#x4E1A;&#x8F83;&#x91CD;&#x7684;&#x4EFB;&#x52A1;&#x6A21;&#x578B;</b></font>
+MongoDB&#x80FD;&#x5145;&#x5206;&#x5229;&#x7528;&#x673A;&#x5668;&#x7684;&#x5185;&#x5B58;&#x8D44;&#x6E90;&#x3002;&#x5982;&#x679C;&#x673A;&#x5668;&#x7684;&#x5185;&#x5B58;&#x8D44;&#x6E90;&#x4E30;&#x5BCC;&#x7684;&#x8BDD;&#xFF0C;MongoDB&#x7684;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x4F1A;&#x5FEB;&#x5F88;&#x591A;</p>
+</li>
+<li><font color="red"><b>&#x76F8;&#x6BD4;MongoDB&#xFF0C;MySQL&#x6570;&#x636E;&#x5E93;&#x66F4;&#x9002;&#x5408;&#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x4E3A;&#x4E3B;&#x7684;&#x4EFB;&#x52A1;&#x6A21;&#x578B;&#xFF0C;&#x5176;&#x6548;&#x7387;&#x76F8;&#x6BD4;&#x4E8E;MongoDB&#x4F18;&#x52BF;&#x975E;&#x5E38;&#x660E;&#x663E;</b></font>
+</li>
+<li><font color="red"><b>&#x5728;&#x5E26;&#x201D;_id&#x201D;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;MongoDB&#x7684;&#x63D2;&#x5165;&#x6548;&#x7387;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x9AD8;</b></font>
+
+<p>&#x5982;&#x679C;&#x60F3;&#x5145;&#x5206;&#x5229;&#x7528;MongoDB&#x6027;&#x80FD;&#x7684;&#x8BDD;&#xFF0C;&#x63A8;&#x8350;&#x91C7;&#x53D6;&#x4E0D;&#x5E26;&#x201D;_id&#x201D;&#x7684;&#x63D2;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x76F8;&#x5173;&#x5B57;&#x6BB5;&#x4F5C;&#x7D22;&#x5F15;&#x6765;&#x67E5;&#x8BE2;&#x3002;</p>
+</li>
+<li><font color="red"><b>MongoDB&#x9002;&#x5408;&#x90A3;&#x4E9B;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5177;&#x4F53;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E0D;&#x660E;&#x786E;&#x6216;&#x8005;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7ECF;&#x5E38;&#x53D8;&#x5316;&#x7684;&#x9700;&#x6C42;&#x6A21;&#x578B;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x5F00;&#x53D1;&#x8005;&#x5341;&#x5206;&#x53CB;&#x597D;</b></font>
+
+<p>MongoDB&#x7528;&#x4E4B;&#x524D;&#x4E0D;&#x7528;&#x60F3;&#x592A;&#x591A;&#xFF1B;&#x800C;MySQL&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x524D;&#x5EFA;&#x5E93;&#x5EFA;&#x8868;&#xFF0C;&#x5E76;&#x660E;&#x786E;&#x6570;&#x636E;&#x7684;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#xFF0C;&#x7EA6;&#x675F;&#x8F83;&#x5927;&#x3002;</p>
+</li>
+<li><font color="red"><b>&#x7A33;&#x5B9A;&#x6027;&#x65B9;&#x9762;&#xFF0C;MongoDB&#x4E0D;&#x5982;MySQL</b></font>
+
+<p>MySQL&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x7A33;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x65E0;&#x8BBA;&#x5728;&#x6307;&#x5B9A;&#x4E3B;&#x952E;&#x8FD8;&#x662F;&#x5728;&#x4E0D;&#x6307;&#x5B9A;&#x4E3B;&#x952E;&#x63D2;&#x5165;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5176;&#x6548;&#x7387;&#x90FD;&#x5DEE;&#x4E0D;&#x4E86;&#x592A;&#x591A;, &#x5176;&#x7A33;&#x5B9A;&#x6027;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x6BCB;&#x5EB8;&#x7F6E;&#x7591;&#x7684;</p>
+</li>
+<li><font color="red"><b>&#x4E8B;&#x52A1;&#x652F;&#x6301;&#x65B9;&#x9762;&#xFF0C;MySQL&#x5360;&#x7EDD;&#x5BF9;&#x4F18;&#x52BF;&#xFF0C;MongoDB&#x5BF9;&#x4E8B;&#x52A1;&#x5173;&#x7CFB;&#x652F;&#x6301;&#x8584;&#x5F31;</b></font>
+
+<p>&#x4E8B;&#x52A1;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x6240;&#x6709;NoSQL&#x6570;&#x636E;&#x5E93;&#x5171;&#x540C;&#x7684;&#x7F3A;&#x9677;&#xFF0C;&#x4E0D;&#x8FC7;NoSQL&#x5E76;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x4E8B;&#x52A1;&#x5173;&#x7CFB;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x5177;&#x4F53;&#x5E94;&#x7528;&#x8FD8;&#x662F;&#x5F88;&#x9700;&#x6C42;</p>
+</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/liao0801_123/article/details/89373494" target="_blank">mongoDB&#x548C;mysql&#x5BF9;&#x6BD4;&#x5206;&#x6790;&#x53CA;&#x9009;</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/1488boss/p/10754290.html" target="_blank">https://www.cnblogs.com/1488boss/p/10754290.html</a></p>
+</li>
+<li>&#x5176;&#x5B83;</li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mongo-auth.html" class="navigation navigation-prev " aria-label="Previous page: 3.1.4 权限分配">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mongodb-grammar.html" class="navigation navigation-next " aria-label="Next page: 3.2.1 数据操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2 数据操作","level":"1.4.2","depth":2,"next":{"title":"3.2.1 数据操作","level":"1.4.2.1","depth":3,"path":"mongo/mongodb-grammar.md","ref":"mongo/mongodb-grammar.md","articles":[]},"previous":{"title":"3.1.4 权限分配","level":"1.4.1.4","depth":3,"path":"mongo/mongo-auth.md","ref":"mongo/mongo-auth.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ad","hide-element","click-reveal","klipse","splitter","chapter-fold","search-plus","back-to-top-button","copy-code-button","-font-settings","-lunr","-search","search-pro","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ad":{"contentBottom":""},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"zhangjunbo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据库操作指南","language":"zh-hans","links":{"gitbook":false,"sharing":{"all":false,"vk":false,"facebook":false,"twitter":false,"google":false}},"gitbook":"*","description":"数据库操作指南"},"file":{"path":"mongo/mongodb-mysql.md","mtime":"2021-01-27T04:28:26.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-21T14:45:09.822Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ad/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

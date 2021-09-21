@@ -1,0 +1,1928 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.5.5 select 其二 · 数据库操作指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjunbo">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sqlalchemy-flask.html" />
+    
+    
+    <link rel="prev" href="sqlalchemy-select.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    1.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="mysql-windos-install.html">
+            
+                <a href="mysql-windos-install.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    1.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="mysql-ubuntu-install.html">
+            
+                <a href="mysql-ubuntu-install.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    1.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="mysql-centos-install.html">
+            
+                <a href="mysql-centos-install.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    1.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="mysql-introduction.html">
+            
+                <a href="mysql-introduction.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    1.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="mysql-sqlparse.html">
+            
+                <a href="mysql-sqlparse.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    1.2.1 解析过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="mysql-dml.html">
+            
+                <a href="mysql-dml.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    1.2.2 DML语言 增删改语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="mysql-dql.html">
+            
+                <a href="mysql-dql.html">
+            
+                    
+                        <b>1.2.2.3.</b>
+                    
+                    1.2.3 DQL语言 基础查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="mysql-dql-join.html">
+            
+                <a href="mysql-dql-join.html">
+            
+                    
+                        <b>1.2.2.4.</b>
+                    
+                    1.2.4 DQL语言 关联查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="mysql-dql-son.html">
+            
+                <a href="mysql-dql-son.html">
+            
+                    
+                        <b>1.2.2.5.</b>
+                    
+                    1.2.5 DQL语言 联合分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="mysql-ddl.html">
+            
+                <a href="mysql-ddl.html">
+            
+                    
+                        <b>1.2.2.6.</b>
+                    
+                    1.2.6 DDL语言 库表管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="mysql-dcl.html">
+            
+                <a href="mysql-dcl.html">
+            
+                    
+                        <b>1.2.2.7.</b>
+                    
+                    1.2.7 DCL语言 权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="mysql-tcl.html">
+            
+                <a href="mysql-tcl.html">
+            
+                    
+                        <b>1.2.2.8.</b>
+                    
+                    1.2.8 TCL语言 事务并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="mysql-index.html">
+            
+                <a href="mysql-index.html">
+            
+                    
+                        <b>1.2.2.9.</b>
+                    
+                    1.2.9 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="mysql-master-slave.html">
+            
+                <a href="mysql-master-slave.html">
+            
+                    
+                        <b>1.2.2.10.</b>
+                    
+                    1.2.10 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="mysql-compare-one.html">
+            
+                <a href="mysql-compare-one.html">
+            
+                    
+                        <b>1.2.2.11.</b>
+                    
+                    1.2.11 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="mysql-compare-two.html">
+            
+                <a href="mysql-compare-two.html">
+            
+                    
+                        <b>1.2.2.12.</b>
+                    
+                    1.2.12 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="mysql-backup-recovery.html">
+            
+                <a href="mysql-backup-recovery.html">
+            
+                    
+                        <b>1.2.2.13.</b>
+                    
+                    1.2.13 备份恢复 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    1.3 pymysql操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="pymysql-base.html">
+            
+                <a href="pymysql-base.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    1.3.1 pymysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="pymysql-aiomysql.html">
+            
+                <a href="pymysql-aiomysql.html">
+            
+                    
+                        <b>1.2.3.2.</b>
+                    
+                    1.3.2 aiomysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="pymysql-dbutils.html">
+            
+                <a href="pymysql-dbutils.html">
+            
+                    
+                        <b>1.2.3.3.</b>
+                    
+                    1.3.3 DBUtils 连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="pymysql-pool.html">
+            
+                <a href="pymysql-pool.html">
+            
+                    
+                        <b>1.2.3.4.</b>
+                    
+                    1.3.4 DBUtils 高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="peewee-introduction.html">
+            
+                <a href="peewee-introduction.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    1.4 peewee
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="peewee-model.html">
+            
+                <a href="peewee-model.html">
+            
+                    
+                        <b>1.2.4.1.</b>
+                    
+                    1.4.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="peewee-connect.html">
+            
+                <a href="peewee-connect.html">
+            
+                    
+                        <b>1.2.4.2.</b>
+                    
+                    1.4.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="peewee-insert.html">
+            
+                <a href="peewee-insert.html">
+            
+                    
+                        <b>1.2.4.3.</b>
+                    
+                    1.4.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="peewee-delete.html">
+            
+                <a href="peewee-delete.html">
+            
+                    
+                        <b>1.2.4.4.</b>
+                    
+                    1.4.4 delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="peewee-update.html">
+            
+                <a href="peewee-update.html">
+            
+                    
+                        <b>1.2.4.5.</b>
+                    
+                    1.4.5 update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="peewee-select.html">
+            
+                <a href="peewee-select.html">
+            
+                    
+                        <b>1.2.4.6.</b>
+                    
+                    1.4.6 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="peewee-web.html">
+            
+                <a href="peewee-web.html">
+            
+                    
+                        <b>1.2.4.7.</b>
+                    
+                    1.4.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="sqlalchemy-introduction.html">
+            
+                <a href="sqlalchemy-introduction.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    2.5 SQLAlchemy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="sqlalchemy-model.html">
+            
+                <a href="sqlalchemy-model.html">
+            
+                    
+                        <b>1.2.5.1.</b>
+                    
+                    1.5.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="sqlalchemy-connect.html">
+            
+                <a href="sqlalchemy-connect.html">
+            
+                    
+                        <b>1.2.5.2.</b>
+                    
+                    1.5.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="sqlalchemy-insert.html">
+            
+                <a href="sqlalchemy-insert.html">
+            
+                    
+                        <b>1.2.5.3.</b>
+                    
+                    1.5.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="sqlalchemy-select.html">
+            
+                <a href="sqlalchemy-select.html">
+            
+                    
+                        <b>1.2.5.4.</b>
+                    
+                    1.5.4 select 其一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5.5" data-path="sqlalchemy-fix-select.html">
+            
+                <a href="sqlalchemy-fix-select.html">
+            
+                    
+                        <b>1.2.5.5.</b>
+                    
+                    1.5.5 select 其二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="sqlalchemy-flask.html">
+            
+                <a href="sqlalchemy-flask.html">
+            
+                    
+                        <b>1.2.5.6.</b>
+                    
+                    1.5.6 flask-sqlalchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="sqlalchemy-web.md">
+            
+                <span>
+            
+                    
+                        <b>1.2.5.7.</b>
+                    
+                    1.5.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../redis/redis-introduction.html">
+            
+                <a href="../redis/redis-introduction.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../redis/redis-install.html">
+            
+                <a href="../redis/redis-install.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    2.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../redis/redis-windos-install.html">
+            
+                <a href="../redis/redis-windos-install.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    2.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../redis/redis-ubuntu-install.html">
+            
+                <a href="../redis/redis-ubuntu-install.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    2.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../redis/redis-centos-install.html">
+            
+                <a href="../redis/redis-centos-install.html">
+            
+                    
+                        <b>1.3.1.3.</b>
+                    
+                    2.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../redis/redis-config.html">
+            
+                <a href="../redis/redis-config.html">
+            
+                    
+                        <b>1.3.1.4.</b>
+                    
+                    2.1.4 配置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../redis/redis-usage.html">
+            
+                <a href="../redis/redis-usage.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    2.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../redis/redis-string.html">
+            
+                <a href="../redis/redis-string.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    2.2.1 string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../redis/redis-key.html">
+            
+                <a href="../redis/redis-key.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    2.2.2 key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../redis/redis-hash.html">
+            
+                <a href="../redis/redis-hash.html">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    2.2.3 hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../redis/redis-list.html">
+            
+                <a href="../redis/redis-list.html">
+            
+                    
+                        <b>1.3.2.4.</b>
+                    
+                    2.2.4 list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../redis/redis-set.html">
+            
+                <a href="../redis/redis-set.html">
+            
+                    
+                        <b>1.3.2.5.</b>
+                    
+                    2.2.5 set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../redis/redis-zset.html">
+            
+                <a href="../redis/redis-zset.html">
+            
+                    
+                        <b>1.3.2.6.</b>
+                    
+                    2.2.6 zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../redis/redis-bitmaps.html">
+            
+                <a href="../redis/redis-bitmaps.html">
+            
+                    
+                        <b>1.3.2.7.</b>
+                    
+                    2.2.7 bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../redis/redis-python.html">
+            
+                <a href="../redis/redis-python.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    2.3. python-redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../redis/redis-python-str.html">
+            
+                <a href="../redis/redis-python-str.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    2.3.1 redis-str
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../redis/redis-python-key.html">
+            
+                <a href="../redis/redis-python-key.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    2.3.2 redis-key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../redis/redis-python-hash.html">
+            
+                <a href="../redis/redis-python-hash.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    2.3.3 redis-hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../redis/redis-python-list.html">
+            
+                <a href="../redis/redis-python-list.html">
+            
+                    
+                        <b>1.3.3.4.</b>
+                    
+                    2.3.4 redis-list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../redis/redis-python-set.html">
+            
+                <a href="../redis/redis-python-set.html">
+            
+                    
+                        <b>1.3.3.5.</b>
+                    
+                    2.3.5 redis-set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../redis/redis-python-zset.html">
+            
+                <a href="../redis/redis-python-zset.html">
+            
+                    
+                        <b>1.3.3.6.</b>
+                    
+                    2.3.6 redis-zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../redis/redis-python-hyperlog.html">
+            
+                <a href="../redis/redis-python-hyperlog.html">
+            
+                    
+                        <b>1.3.3.7.</b>
+                    
+                    2.3.7 redis-hyperlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../redis/redis-python-example.html">
+            
+                <a href="../redis/redis-python-example.html">
+            
+                    
+                        <b>1.3.3.8.</b>
+                    
+                    2.3.8 应用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../redis/redis-python-strict.html">
+            
+                <a href="../redis/redis-python-strict.html">
+            
+                    
+                        <b>1.3.3.9.</b>
+                    
+                    2.3.9 Redis与StrictRedis区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../redis/reids-senior-problem.html">
+            
+                <a href="../redis/reids-senior-problem.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    2.4. 应用场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../redis/redis-master-slave.html">
+            
+                <a href="../redis/redis-master-slave.html">
+            
+                    
+                        <b>1.3.4.1.</b>
+                    
+                    2.3.1 主从读分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../redis/redis-application.html">
+            
+                <a href="../redis/redis-application.html">
+            
+                    
+                        <b>1.3.4.2.</b>
+                    
+                    2.3.2 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../redis/redis-scene.html">
+            
+                <a href="../redis/redis-scene.html">
+            
+                    
+                        <b>1.3.4.3.</b>
+                    
+                    2.3.3 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../mongo/SUMMARY.html">
+            
+                <a href="../mongo/SUMMARY.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    3.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../mongo/mongo-windos-install.html">
+            
+                <a href="../mongo/mongo-windos-install.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    3.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../mongo/mongo-ubuntu-install.html">
+            
+                <a href="../mongo/mongo-ubuntu-install.html">
+            
+                    
+                        <b>1.4.1.2.</b>
+                    
+                    3.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../mongo/mongo-centos-install.html">
+            
+                <a href="../mongo/mongo-centos-install.html">
+            
+                    
+                        <b>1.4.1.3.</b>
+                    
+                    3.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../mongo/mongo-auth.html">
+            
+                <a href="../mongo/mongo-auth.html">
+            
+                    
+                        <b>1.4.1.4.</b>
+                    
+                    3.1.4 权限分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../mongo/mongodb-mysql.html">
+            
+                <a href="../mongo/mongodb-mysql.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    3.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../mongo/mongodb-grammar.html">
+            
+                <a href="../mongo/mongodb-grammar.html">
+            
+                    
+                        <b>1.4.2.1.</b>
+                    
+                    3.2.1 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../mongo/mongodb-index.html">
+            
+                <a href="../mongo/mongodb-index.html">
+            
+                    
+                        <b>1.4.2.2.</b>
+                    
+                    3.2.2 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../mongo/mongodb-export.html">
+            
+                <a href="../mongo/mongodb-export.html">
+            
+                    
+                        <b>1.4.2.3.</b>
+                    
+                    3.2.3 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../mongo/pymongo.html">
+            
+                <a href="../mongo/pymongo.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    3.3 pymongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../mongo/mongoengine.html">
+            
+                <a href="../mongo/mongoengine.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    3.4 mongoengine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../mongo/mongoengine-connect.html">
+            
+                <a href="../mongo/mongoengine-connect.html">
+            
+                    
+                        <b>1.4.4.1.</b>
+                    
+                    3.4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../mongo/mongoengine-documents.html">
+            
+                <a href="../mongo/mongoengine-documents.html">
+            
+                    
+                        <b>1.4.4.2.</b>
+                    
+                    3.4.2 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../mongo/mongoengine-document-instances.html">
+            
+                <a href="../mongo/mongoengine-document-instances.html">
+            
+                    
+                        <b>1.4.4.3.</b>
+                    
+                    3.4.3 应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.Elasticsearch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../elasticsearch/elasticsearch-connect.html">
+            
+                <a href="../elasticsearch/elasticsearch-connect.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    4.1 基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.5.5 select 其二</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="125-sqlalchemy&#x4E4B;select&#x4E8C;">1.2.5 sqlalchemy&#x4E4B;select&lt;&#x4E8C;&gt;</h3>
+<h4 id="&#x4E00;&#x3001;&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;">&#x4E00;&#x3001;&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;</h4>
+<ul>
+<li><h5 id="&#x590D;&#x5408;&#x67E5;&#x8BE2;">&#x590D;&#x5408;&#x67E5;&#x8BE2;</h5>
+<pre><code class="lang-python">User.query.filter(User.name.startswith(<span class="hljs-string">&apos;13&apos;</span>)).order_by(User.id.desc()).offset(<span class="hljs-number">2</span>).limit(<span class="hljs-number">5</span>).all()
+</code></pre>
+<pre><code class="lang-python">query = User.query.filter(User.name.startswith(<span class="hljs-string">&apos;13&apos;</span>))
+query = query.order_by(User.id.desc())
+query = query.offset(<span class="hljs-number">2</span>).limit(<span class="hljs-number">5</span>)
+ret = query.all()
+</code></pre>
+</li>
+<li><h5 id="&#x4F18;&#x5316;&#x67E5;&#x8BE2;">&#x4F18;&#x5316;&#x67E5;&#x8BE2;</h5>
+<pre><code class="lang-python">user = User.query.filter_by(id=<span class="hljs-number">1</span>).first()  <span class="hljs-comment"># &#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5B57;&#x6BB5;</span>
+select user_id, mobile......
+
+select * <span class="hljs-keyword">from</span>   <span class="hljs-comment"># &#x7A0B;&#x5E8F;&#x4E0D;&#x8981;&#x4F7F;&#x7528;</span>
+select user_id, mobile,.... <span class="hljs-comment"># &#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;</span>
+
+<span class="hljs-keyword">from</span> sqlalchemy.orm <span class="hljs-keyword">import</span> load_only
+User.query.options(load_only(User.name, User.mobile)).filter_by(id=<span class="hljs-number">1</span>).first() <span class="hljs-comment"># &#x67E5;&#x8BE2;&#x7279;&#x5B9A;&#x5B57;&#x6BB5;</span>
+</code></pre>
+</li>
+<li><h5 id="&#x805A;&#x5408;&#x67E5;&#x8BE2;">&#x805A;&#x5408;&#x67E5;&#x8BE2;</h5>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> func
+
+db.session.query(Relation.user_id, func.count(Relation.target_user_id)).filter(Relation.relation == Relation.RELATION.FOLLOW).group_by(Relation.user_id).all()
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E8C;&#x3001;&#x591A;&#x8868;&#x5173;&#x7CFB;">&#x4E8C;&#x3001;&#x591A;&#x8868;&#x5173;&#x7CFB;</h4>
+<ul>
+<li><p>User&#x6A21;&#x578B; </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> Column, Integer, String
+<span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> ForeignKey
+<span class="hljs-keyword">from</span> sqlalchemy.orm <span class="hljs-keyword">import</span> relationship
+<span class="hljs-keyword">from</span> Models <span class="hljs-keyword">import</span> Base
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(Base)</span>:</span>
+__tablename__ = <span class="hljs-string">&apos;users&apos;</span>
+id = Column(<span class="hljs-string">&apos;id&apos;</span>, Integer, primary_key=<span class="hljs-keyword">True</span>, autoincrement=<span class="hljs-keyword">True</span>)
+name = Column(<span class="hljs-string">&apos;name&apos;</span>, String(<span class="hljs-number">50</span>))
+age = Column(<span class="hljs-string">&apos;age&apos;</span>, Integer)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x89D2;&#x8272;id&#x5916;&#x952E;(&#x5173;&#x8054;&#x5230;Role&#x8868;&#x7684;id&#x5C5E;&#x6027;)</span>
+role_id = Column(<span class="hljs-string">&apos;role_id&apos;</span>, Integer, ForeignKey(<span class="hljs-string">&apos;roles.id&apos;</span>))
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x540C;&#x8868;&#x5916;&#x952E;</span>
+second_role_id = Column(<span class="hljs-string">&apos;second_role_id&apos;</span>, Integer, ForeignKey(<span class="hljs-string">&apos;roles.id&apos;</span>))
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5173;&#x7CFB;&#x5C5E;&#x6027;&#xFF0C;&#x5173;&#x8054;&#x5230;role_id&#x5916;&#x952E;&#x4E0A;</span>
+role = relationship(<span class="hljs-string">&apos;Role&apos;</span>, foreign_keys=<span class="hljs-string">&apos;User.role_id&apos;</span>, backref=<span class="hljs-string">&apos;User_role_id&apos;</span>)
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5173;&#x7CFB;&#x5C5E;&#x6027;&#xFF0C;&#x5173;&#x8054;&#x5230;second_role_id&#x5916;&#x952E;&#x4E0A;</span>
+second_role = relationship(<span class="hljs-string">&apos;Role&apos;</span>, foreign_keys=<span class="hljs-string">&apos;User.second_role_id&apos;</span>, backref=<span class="hljs-string">&apos;User_second_role_id&apos;</span>)
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>Role&#x6A21;&#x578B; </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> Column, Integer, String
+<span class="hljs-keyword">from</span> sqlalchemy.orm <span class="hljs-keyword">import</span> relationship
+<span class="hljs-keyword">from</span> Models <span class="hljs-keyword">import</span> Base
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Role</span><span class="hljs-params">(Base)</span>:</span>
+ __tablename__ = <span class="hljs-string">&apos;roles&apos;</span>
+ id = Column(<span class="hljs-string">&apos;id&apos;</span>, Integer, primary_key=<span class="hljs-keyword">True</span>, autoincrement=<span class="hljs-keyword">True</span>)
+ name = Column(<span class="hljs-string">&apos;name&apos;</span>, String(<span class="hljs-number">50</span>))
+
+ <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5173;&#x7CFB;&#x5C5E;&#x6027;&#xFF0C;&#x5173;&#x8054;&#x5230;User.role_id&#x5C5E;&#x6027;&#x4E0A;</span>
+ users = relationship(<span class="hljs-string">&quot;User&quot;</span>, foreign_keys=<span class="hljs-string">&apos;User.role_id&apos;</span>, backref=<span class="hljs-string">&quot;Role_users&quot;</span>)
+ <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5173;&#x7CFB;&#x5C5E;&#x6027;&#xFF0C;&#x5173;&#x8054;&#x5230;User.second_role_id&#x5C5E;&#x6027;&#x4E0A;</span>
+ second_users = relationship(<span class="hljs-string">&quot;User&quot;</span>, foreign_keys=<span class="hljs-string">&apos;User.second_role_id&apos;</span>, backref=<span class="hljs-string">&quot;Role_second_users&quot;</span>)
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x5916;&#x952E;&#x7684;&#x65F6;&#x5019;<code>ForeignKey(&apos;roles.id&apos;)</code>&#x8FD9;&#x91CC;&#x9762;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x8868;&#x540D;&#x548C;&#x8868;&#x5217;</p>
+<p>&#x5728;&#x8BBE;&#x7F6E;&#x5173;&#x8054;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019;<code>relationship(&apos;Role&apos;, foreign_keys=&apos;User.role_id&apos;, backref=&apos;User_role_id&apos;)</code>&#xFF0C;&#x8FD9;&#x91CC;&#x7684;<code>foreign_keys</code>&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x7C7B;&#x540D;&#x548C;&#x5C5E;&#x6027;&#x540D; </p>
+<pre><code class="lang-python">u = User(name=<span class="hljs-string">&apos;tobi&apos;</span>, age=<span class="hljs-number">200</span>)
+r1 = Role(name=<span class="hljs-string">&apos;admin&apos;</span>)
+r2 = Role(name=<span class="hljs-string">&apos;user&apos;</span>)
+
+u.role = r1
+u.second_role = r2
+
+session.add(u)
+session.commit()
+
+<span class="hljs-comment"># &#x67E5;&#x8BE2;&#xFF08;&#x5BF9;&#x4E8E;&#x5916;&#x952E;&#x5173;&#x8054;&#x7684;&#x5173;&#x7CFB;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;session&#x4F1A;&#x5230;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#xFF09;</span>
+
+roles = session.query(Role).all()
+<span class="hljs-keyword">for</span> role <span class="hljs-keyword">in</span> roles:
+   <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;role:{0} users&apos;</span>
+   <span class="hljs-keyword">for</span> user <span class="hljs-keyword">in</span> role.users:
+       <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;{0}&apos;</span>.format(user.name)
+   <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;role:{0} second_users&apos;</span>
+   <span class="hljs-keyword">for</span> user <span class="hljs-keyword">in</span> role.second_users:
+       <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;{0}&apos;</span>.format(user.name)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8868;&#x793A;&#x7684;&#x662F;&#x4E00;&#x5BF9;&#x591A;&#xFF08;&#x591A;&#x5BF9;&#x4E00;&#xFF09;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x5BF9;&#x4E00;&#xFF0C;&#x591A;&#x5BF9;&#x591A;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x8868;&#x793A;&#x4E00;&#x5BF9;&#x4E00;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5728;&#x5B9A;&#x4E49;relationship&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;<code>uselist</code>&#x4E3A;False&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;True&#xFF09;&#xFF0C;&#x5982;&#x5728;Role&#x4E2D; </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Role</span><span class="hljs-params">(Base)</span>:</span>
+   ...
+   user = relationship(<span class="hljs-string">&quot;User&quot;</span>, uselist=<span class="hljs-keyword">False</span>, foreign_keys=<span class="hljs-string">&apos;User.role_id&apos;</span>, backref=<span class="hljs-string">&quot;Role_user&quot;</span>)
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E09;&#x3001;&#x5173;&#x8054;&#x67E5;&#x8BE2;">&#x4E09;&#x3001;&#x5173;&#x8054;&#x67E5;&#x8BE2;</h4>
+<ul>
+<li><h5 id="&#x4F7F;&#x7528;foreignkey">&#x4F7F;&#x7528;ForeignKey</h5>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(db.Model)</span>:</span>
+    ...
+    profile = db.relationship(<span class="hljs-string">&apos;UserProfile&apos;</span>, uselist=<span class="hljs-keyword">False</span>)
+    followings = db.relationship(<span class="hljs-string">&apos;Relation&apos;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserProfile</span><span class="hljs-params">(db.Model)</span>:</span>
+    id = db.Column(<span class="hljs-string">&apos;user_id&apos;</span>, db.Integer, db.ForeignKey(<span class="hljs-string">&apos;user_basic.user_id&apos;</span>), primary_key=<span class="hljs-keyword">True</span>,  doc=<span class="hljs-string">&apos;&#x7528;&#x6237;ID&apos;</span>)
+    ...
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Relation</span><span class="hljs-params">(db.Model)</span>:</span>
+    user_id = db.Column(db.Integer, db.ForeignKey(<span class="hljs-string">&apos;user_basic.user_id&apos;</span>), doc=<span class="hljs-string">&apos;&#x7528;&#x6237;ID&apos;</span>)
+    ...
+
+<span class="hljs-comment"># &#x6D4B;&#x8BD5;   </span>
+user = User.query.get(<span class="hljs-number">1</span>)
+user.profile.gender
+user.followings
+</code></pre>
+</li>
+<li><h5 id="&#x4F7F;&#x7528;primaryjoin">&#x4F7F;&#x7528;primaryjoin</h5>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(db.Model)</span>:</span>
+    ...
+
+    profile = db.relationship(<span class="hljs-string">&apos;UserProfile&apos;</span>, primaryjoin=<span class="hljs-string">&apos;User.id==foreign(UserProfile.id)&apos;</span>, uselist=<span class="hljs-keyword">False</span>)
+    followings = db.relationship(<span class="hljs-string">&apos;Relation&apos;</span>, primaryjoin=<span class="hljs-string">&apos;User.id==foreign(Relation.user_id)&apos;</span>)
+
+<span class="hljs-comment"># &#x6D4B;&#x8BD5;</span>
+user = User.query.get(<span class="hljs-number">1</span>)
+user.profile.gender
+user.followings
+</code></pre>
+</li>
+<li><h5 id="&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5173;&#x8054;&#x67E5;&#x8BE2;">&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5173;&#x8054;&#x67E5;&#x8BE2;</h5>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Relation</span><span class="hljs-params">(db.Model)</span>:</span>
+    ...
+    target_user = db.relationship(<span class="hljs-string">&apos;User&apos;</span>, primaryjoin=<span class="hljs-string">&apos;Relation.target_user_id==foreign(User.id)&apos;</span>, uselist=<span class="hljs-keyword">False</span>)
+
+<span class="hljs-keyword">from</span> sqlalchemy.orm <span class="hljs-keyword">import</span> load_only, contains_eager
+
+Relation.query.join(Relation.target_user).options(load_only(Relation.target_user_id), contains_eager(Relation.target_user).load_only(User.name)).all()
+
+&#x5173;&#x8054;&#x67E5;&#x8BE2;a&#x8868;&#x5B57;&#x6BB5;&#xFF0C;b&#x8868;&#x5B57;&#x6BB5;&#xFF1B;&#x7528;&#x5148;join &#x7136;&#x540E;&#x518D;contains_eager&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x5B57;&#x6BB5;
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x56DB;&#x3001;&#x591A;&#x8868;&#x67E5;&#x8BE2;">&#x56DB;&#x3001;&#x591A;&#x8868;&#x67E5;&#x8BE2;</h4>
+<p>&#x7531;&#x4E8E;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x591A;&#x4E2A;&#x8868;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x5916;&#x952E;&#x5B9E;&#x73B0;&#x4E00;&#x5BF9;&#x591A;&#x3001;&#x591A;&#x5BF9;&#x591A;&#x7B49;&#x5173;&#x8054;&#xFF0C;&#x76F8;&#x5E94;&#x5730;&#xFF0C;ORM&#x6846;&#x67B6;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x5BF9;&#x591A;&#x3001;&#x591A;&#x5BF9;&#x591A;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;User&#x62E5;&#x6709;&#x591A;&#x4E2A;Book&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(Base)</span>:</span>
+    __tablename__ = <span class="hljs-string">&apos;user&apos;</span>
+    id = Column(String(<span class="hljs-number">20</span>), primary_key=<span class="hljs-keyword">True</span>)
+    name = Column(String(<span class="hljs-number">20</span>))
+
+    <span class="hljs-comment"># &#x4E00;&#x5BF9;&#x591A;:</span>
+    books = relationship(<span class="hljs-string">&apos;Book&apos;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span><span class="hljs-params">(Base)</span>:</span>
+    __tablename__ = <span class="hljs-string">&apos;book&apos;</span>
+    id = Column(String(<span class="hljs-number">20</span>), primary_key=<span class="hljs-keyword">True</span>)
+    name = Column(String(<span class="hljs-number">20</span>))
+
+    <span class="hljs-comment"># &#x201C;&#x591A;&#x201D;&#x7684;&#x4E00;&#x65B9;&#x7684;book&#x8868;&#x662F;&#x901A;&#x8FC7;&#x5916;&#x952E;&#x5173;&#x8054;&#x5230;user&#x8868;&#x7684;:</span>
+    user_id = Column(String(<span class="hljs-number">20</span>), ForeignKey(<span class="hljs-string">&apos;user.id&apos;</span>))
+</code></pre>
+<p> &#x5F53;&#x6211;&#x4EEC;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;User&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;books&#x5C5E;&#x6027;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x82E5;&#x5E72;&#x4E2A;Book&#x5BF9;&#x8C61;&#x7684;list&#x3002;</p>
+<p> &#x591A;&#x8868;&#x67E5;&#x8BE2;&#x901A;&#x5E38;&#x4F7F;&#x7528;<code>join</code>&#x5185;&#x8FDE;&#x63A5;&#x8FDB;&#x884C;&#x8868;&#x8FDE;&#x63A5;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8868;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6761;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982; </p>
+<pre><code class="lang-python">users = db.session.query(User).join(Role, Role.id == User.role_id)
+
+<span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> users:
+    <span class="hljs-keyword">print</span> u.name
+</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x67E5;&#x8BE2;&#x591A;&#x4E2A;&#x8868;&#xFF0C;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python">result = db.session.query(User, Role).filter(User.role_id = Role.id)
+<span class="hljs-comment"># &#x8FD9;&#x91CC;&#x9009;&#x62E9;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x8868;&#xFF0C;&#x4F7F;&#x7528;&#x5143;&#x7EC4;&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">for</span> u, r <span class="hljs-keyword">in</span> result:
+      <span class="hljs-keyword">print</span> u.name
+</code></pre>
+<h4 id="&#x4E94;&#x3001;&#x4E8B;&#x52A1;">&#x4E94;&#x3001;&#x4E8B;&#x52A1;</h4>
+<pre><code class="lang-python">environ = {<span class="hljs-string">&apos;wsgi.version&apos;</span>:(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>), <span class="hljs-string">&apos;wsgi.input&apos;</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;REQUEST_METHOD&apos;</span>: <span class="hljs-string">&apos;GET&apos;</span>, <span class="hljs-string">&apos;PATH_INFO&apos;</span>: <span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-string">&apos;SERVER_NAME&apos;</span>: <span class="hljs-string">&apos;itcast server&apos;</span>, <span class="hljs-string">&apos;wsgi.url_scheme&apos;</span>: <span class="hljs-string">&apos;http&apos;</span>, <span class="hljs-string">&apos;SERVER_PORT&apos;</span>: <span class="hljs-string">&apos;80&apos;</span>}
+
+<span class="hljs-keyword">with</span> app.request_context(environ):
+    <span class="hljs-keyword">try</span>:
+        user = User(mobile=<span class="hljs-string">&apos;18911111111&apos;</span>, name=<span class="hljs-string">&apos;itheima&apos;</span>)
+        db.session.add(user)
+        db.session.flush() <span class="hljs-comment"># &#x5C06;db.session&#x8BB0;&#x5F55;&#x7684;sql&#x4F20;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6267;&#x884C;</span>
+        profile = UserProfile(id=user.id)
+        db.session.add(profile)
+        db.session.commit()
+    <span class="hljs-keyword">except</span>:
+        db.session.rollback()
+</code></pre>
+<h4 id="&#x516D;&#x3001;&#x5176;&#x4ED6;">&#x516D;&#x3001;&#x5176;&#x4ED6;</h4>
+<table>
+<thead>
+<tr>
+<th>backref</th>
+<th>&#x5728;&#x5173;&#x7CFB;&#x7684;&#x53E6;&#x4E00;&#x6A21;&#x578B;&#x4E2D;&#x6DFB;&#x52A0;&#x53CD;&#x5411;&#x5F15;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>primary join</td>
+<td>&#x660E;&#x786E;&#x6307;&#x5B9A;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x7684;&#x8054;&#x7ED3;&#x6761;&#x4EF6;</td>
+</tr>
+<tr>
+<td>uselist</td>
+<td>&#x5982;&#x679C;&#x4E3A;False&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x5217;&#x8868;&#xFF0C;&#x800C;&#x4F7F;&#x7528;&#x6807;&#x91CF;&#x503C;</td>
+</tr>
+<tr>
+<td>order_by</td>
+<td>&#x6307;&#x5B9A;&#x5173;&#x7CFB;&#x4E2D;&#x8BB0;&#x5F55;&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>secondary</td>
+<td>&#x6307;&#x5B9A;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x4E2D;&#x5173;&#x7CFB;&#x8868;&#x7684;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>secondary join</td>
+<td>&#x5728;SQLAlchemy&#x4E2D;&#x65E0;&#x6CD5;&#x81EA;&#x884C;&#x51B3;&#x5B9A;&#x65F6;&#xFF0C;&#x6307;&#x5B9A;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x4E2D;&#x7684;&#x4E8C;&#x7EA7;&#x8054;&#x7ED3;&#x6761;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4E00;&#x5BF9;&#x591A;&#x5173;&#x7CFB;, &#x540C;&#x6B65;&#x5230;&#x6570;&#x636E;&#x5E93;&#x5916;&#x952E;&#x7684;&#x5173;&#x7CFB;</span>
+user_id = db.Column(db.Integer, db.ForeignKey(<span class="hljs-string">&apos;user.id&apos;</span>))  <span class="hljs-comment"># &#x5916;&#x68C0;&#x4E0D;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;</span>
+user_id = db.Column(db.Integer, db.ForeignKey(<span class="hljs-string">&apos;user.id&apos;</span>), nullable=<span class="hljs-keyword">False</span>)  <span class="hljs-comment"># &#x5916;&#x68C0;&#x4E0D;&#x5141;&#x8BB8;&#x4E3A;&#x7A7A;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x7684;&#x5173;&#x7CFB;</span>
+articles = db.relationship(<span class="hljs-string">&apos;Article&apos;</span>, backref=<span class="hljs-string">&apos;user&apos;</span>, lazy=<span class="hljs-string">&apos;dynamic&apos;</span>)
+comments = db.relationship(<span class="hljs-string">&apos;Comment&apos;</span>, backref=<span class="hljs-string">&apos;user&apos;</span>)
+comments = db.relationship(<span class="hljs-string">&apos;Comment&apos;</span>, backref=<span class="hljs-string">&apos;news&apos;</span>)
+</code></pre>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sqlalchemy-select.html" class="navigation navigation-prev " aria-label="Previous page: 1.5.4 select 其一">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sqlalchemy-flask.html" class="navigation navigation-next " aria-label="Next page: 1.5.6 flask-sqlalchemy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.5.5 select 其二","level":"1.2.5.5","depth":3,"next":{"title":"1.5.6 flask-sqlalchemy","level":"1.2.5.6","depth":3,"path":"mysql/sqlalchemy-flask.md","ref":"mysql/sqlalchemy-flask.md","articles":[]},"previous":{"title":"1.5.4 select 其一","level":"1.2.5.4","depth":3,"path":"mysql/sqlalchemy-select.md","ref":"mysql/sqlalchemy-select.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ad","hide-element","click-reveal","klipse","splitter","chapter-fold","search-plus","back-to-top-button","copy-code-button","-font-settings","-lunr","-search","search-pro","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ad":{"contentBottom":""},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"zhangjunbo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据库操作指南","language":"zh-hans","links":{"gitbook":false,"sharing":{"all":false,"vk":false,"facebook":false,"twitter":false,"google":false}},"gitbook":"*","description":"数据库操作指南"},"file":{"path":"mysql/sqlalchemy-fix-select.md","mtime":"2020-11-18T13:17:14.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-21T14:45:09.822Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ad/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

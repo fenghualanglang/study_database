@@ -1,0 +1,45 @@
+{
+    "title": "数据库操作指南",
+    "description": "数据库操作指南",
+    "author": "zhangjunbo",
+    "language": "zh-hans",
+    "root": ".",
+    "links": {
+        "gitbook": false,
+        "sharing": {
+            "all":false,
+            "vk": false,
+            "facebook": false,
+            "twitter": false,
+            "google": false
+        }
+    },
+
+    "plugins": [
+        "ad",
+    	"hide-element",
+        "click-reveal",
+        "klipse",
+        "splitter",
+        "chapter-fold",
+        "search-plus",
+        "back-to-top-button",
+        "copy-code-button",
+        "-font-settings",
+        "-lunr", 
+        "-search", 
+        "search-pro"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"] 
+        },
+
+        "ad": {
+            "contentBottom": ""
+        }
+    }
+}

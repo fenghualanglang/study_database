@@ -1,0 +1,2162 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2.3 DQL语言 基础查询 · 数据库操作指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjunbo">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mysql-dql-join.html" />
+    
+    
+    <link rel="prev" href="mysql-dml.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    1.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="mysql-windos-install.html">
+            
+                <a href="mysql-windos-install.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    1.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="mysql-ubuntu-install.html">
+            
+                <a href="mysql-ubuntu-install.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    1.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="mysql-centos-install.html">
+            
+                <a href="mysql-centos-install.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    1.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="mysql-introduction.html">
+            
+                <a href="mysql-introduction.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    1.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="mysql-sqlparse.html">
+            
+                <a href="mysql-sqlparse.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    1.2.1 解析过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="mysql-dml.html">
+            
+                <a href="mysql-dml.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    1.2.2 DML语言 增删改语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.3" data-path="mysql-dql.html">
+            
+                <a href="mysql-dql.html">
+            
+                    
+                        <b>1.2.2.3.</b>
+                    
+                    1.2.3 DQL语言 基础查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="mysql-dql-join.html">
+            
+                <a href="mysql-dql-join.html">
+            
+                    
+                        <b>1.2.2.4.</b>
+                    
+                    1.2.4 DQL语言 关联查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="mysql-dql-son.html">
+            
+                <a href="mysql-dql-son.html">
+            
+                    
+                        <b>1.2.2.5.</b>
+                    
+                    1.2.5 DQL语言 联合分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="mysql-ddl.html">
+            
+                <a href="mysql-ddl.html">
+            
+                    
+                        <b>1.2.2.6.</b>
+                    
+                    1.2.6 DDL语言 库表管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="mysql-dcl.html">
+            
+                <a href="mysql-dcl.html">
+            
+                    
+                        <b>1.2.2.7.</b>
+                    
+                    1.2.7 DCL语言 权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="mysql-tcl.html">
+            
+                <a href="mysql-tcl.html">
+            
+                    
+                        <b>1.2.2.8.</b>
+                    
+                    1.2.8 TCL语言 事务并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="mysql-index.html">
+            
+                <a href="mysql-index.html">
+            
+                    
+                        <b>1.2.2.9.</b>
+                    
+                    1.2.9 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="mysql-master-slave.html">
+            
+                <a href="mysql-master-slave.html">
+            
+                    
+                        <b>1.2.2.10.</b>
+                    
+                    1.2.10 性能优化 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="mysql-compare-one.html">
+            
+                <a href="mysql-compare-one.html">
+            
+                    
+                        <b>1.2.2.11.</b>
+                    
+                    1.2.11 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="mysql-compare-two.html">
+            
+                <a href="mysql-compare-two.html">
+            
+                    
+                        <b>1.2.2.12.</b>
+                    
+                    1.2.12 DQL高级  同比环比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="mysql-backup-recovery.html">
+            
+                <a href="mysql-backup-recovery.html">
+            
+                    
+                        <b>1.2.2.13.</b>
+                    
+                    1.2.13 备份恢复 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    1.3 pymysql操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="pymysql-base.html">
+            
+                <a href="pymysql-base.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    1.3.1 pymysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="pymysql-aiomysql.html">
+            
+                <a href="pymysql-aiomysql.html">
+            
+                    
+                        <b>1.2.3.2.</b>
+                    
+                    1.3.2 aiomysql 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="pymysql-dbutils.html">
+            
+                <a href="pymysql-dbutils.html">
+            
+                    
+                        <b>1.2.3.3.</b>
+                    
+                    1.3.3 DBUtils 连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="pymysql-pool.html">
+            
+                <a href="pymysql-pool.html">
+            
+                    
+                        <b>1.2.3.4.</b>
+                    
+                    1.3.4 DBUtils 高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="peewee-introduction.html">
+            
+                <a href="peewee-introduction.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    1.4 peewee
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="peewee-model.html">
+            
+                <a href="peewee-model.html">
+            
+                    
+                        <b>1.2.4.1.</b>
+                    
+                    1.4.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="peewee-connect.html">
+            
+                <a href="peewee-connect.html">
+            
+                    
+                        <b>1.2.4.2.</b>
+                    
+                    1.4.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="peewee-insert.html">
+            
+                <a href="peewee-insert.html">
+            
+                    
+                        <b>1.2.4.3.</b>
+                    
+                    1.4.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="peewee-delete.html">
+            
+                <a href="peewee-delete.html">
+            
+                    
+                        <b>1.2.4.4.</b>
+                    
+                    1.4.4 delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="peewee-update.html">
+            
+                <a href="peewee-update.html">
+            
+                    
+                        <b>1.2.4.5.</b>
+                    
+                    1.4.5 update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="peewee-select.html">
+            
+                <a href="peewee-select.html">
+            
+                    
+                        <b>1.2.4.6.</b>
+                    
+                    1.4.6 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="peewee-web.html">
+            
+                <a href="peewee-web.html">
+            
+                    
+                        <b>1.2.4.7.</b>
+                    
+                    1.4.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="sqlalchemy-introduction.html">
+            
+                <a href="sqlalchemy-introduction.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    2.5 SQLAlchemy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="sqlalchemy-model.html">
+            
+                <a href="sqlalchemy-model.html">
+            
+                    
+                        <b>1.2.5.1.</b>
+                    
+                    1.5.1 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="sqlalchemy-connect.html">
+            
+                <a href="sqlalchemy-connect.html">
+            
+                    
+                        <b>1.2.5.2.</b>
+                    
+                    1.5.2 connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="sqlalchemy-insert.html">
+            
+                <a href="sqlalchemy-insert.html">
+            
+                    
+                        <b>1.2.5.3.</b>
+                    
+                    1.5.3 insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="sqlalchemy-select.html">
+            
+                <a href="sqlalchemy-select.html">
+            
+                    
+                        <b>1.2.5.4.</b>
+                    
+                    1.5.4 select 其一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="sqlalchemy-fix-select.html">
+            
+                <a href="sqlalchemy-fix-select.html">
+            
+                    
+                        <b>1.2.5.5.</b>
+                    
+                    1.5.5 select 其二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="sqlalchemy-flask.html">
+            
+                <a href="sqlalchemy-flask.html">
+            
+                    
+                        <b>1.2.5.6.</b>
+                    
+                    1.5.6 flask-sqlalchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="sqlalchemy-web.md">
+            
+                <span>
+            
+                    
+                        <b>1.2.5.7.</b>
+                    
+                    1.5.7 框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../redis/redis-introduction.html">
+            
+                <a href="../redis/redis-introduction.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../redis/redis-install.html">
+            
+                <a href="../redis/redis-install.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    2.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../redis/redis-windos-install.html">
+            
+                <a href="../redis/redis-windos-install.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    2.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../redis/redis-ubuntu-install.html">
+            
+                <a href="../redis/redis-ubuntu-install.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    2.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../redis/redis-centos-install.html">
+            
+                <a href="../redis/redis-centos-install.html">
+            
+                    
+                        <b>1.3.1.3.</b>
+                    
+                    2.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../redis/redis-config.html">
+            
+                <a href="../redis/redis-config.html">
+            
+                    
+                        <b>1.3.1.4.</b>
+                    
+                    2.1.4 配置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../redis/redis-usage.html">
+            
+                <a href="../redis/redis-usage.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    2.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../redis/redis-string.html">
+            
+                <a href="../redis/redis-string.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    2.2.1 string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../redis/redis-key.html">
+            
+                <a href="../redis/redis-key.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    2.2.2 key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../redis/redis-hash.html">
+            
+                <a href="../redis/redis-hash.html">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    2.2.3 hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../redis/redis-list.html">
+            
+                <a href="../redis/redis-list.html">
+            
+                    
+                        <b>1.3.2.4.</b>
+                    
+                    2.2.4 list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../redis/redis-set.html">
+            
+                <a href="../redis/redis-set.html">
+            
+                    
+                        <b>1.3.2.5.</b>
+                    
+                    2.2.5 set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../redis/redis-zset.html">
+            
+                <a href="../redis/redis-zset.html">
+            
+                    
+                        <b>1.3.2.6.</b>
+                    
+                    2.2.6 zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../redis/redis-bitmaps.html">
+            
+                <a href="../redis/redis-bitmaps.html">
+            
+                    
+                        <b>1.3.2.7.</b>
+                    
+                    2.2.7 bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../redis/redis-python.html">
+            
+                <a href="../redis/redis-python.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    2.3. python-redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../redis/redis-python-str.html">
+            
+                <a href="../redis/redis-python-str.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    2.3.1 redis-str
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../redis/redis-python-key.html">
+            
+                <a href="../redis/redis-python-key.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    2.3.2 redis-key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../redis/redis-python-hash.html">
+            
+                <a href="../redis/redis-python-hash.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    2.3.3 redis-hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../redis/redis-python-list.html">
+            
+                <a href="../redis/redis-python-list.html">
+            
+                    
+                        <b>1.3.3.4.</b>
+                    
+                    2.3.4 redis-list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../redis/redis-python-set.html">
+            
+                <a href="../redis/redis-python-set.html">
+            
+                    
+                        <b>1.3.3.5.</b>
+                    
+                    2.3.5 redis-set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../redis/redis-python-zset.html">
+            
+                <a href="../redis/redis-python-zset.html">
+            
+                    
+                        <b>1.3.3.6.</b>
+                    
+                    2.3.6 redis-zset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../redis/redis-python-hyperlog.html">
+            
+                <a href="../redis/redis-python-hyperlog.html">
+            
+                    
+                        <b>1.3.3.7.</b>
+                    
+                    2.3.7 redis-hyperlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../redis/redis-python-example.html">
+            
+                <a href="../redis/redis-python-example.html">
+            
+                    
+                        <b>1.3.3.8.</b>
+                    
+                    2.3.8 应用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../redis/redis-python-strict.html">
+            
+                <a href="../redis/redis-python-strict.html">
+            
+                    
+                        <b>1.3.3.9.</b>
+                    
+                    2.3.9 Redis与StrictRedis区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../redis/reids-senior-problem.html">
+            
+                <a href="../redis/reids-senior-problem.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    2.4. 应用场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../redis/redis-master-slave.html">
+            
+                <a href="../redis/redis-master-slave.html">
+            
+                    
+                        <b>1.3.4.1.</b>
+                    
+                    2.3.1 主从读分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../redis/redis-application.html">
+            
+                <a href="../redis/redis-application.html">
+            
+                    
+                        <b>1.3.4.2.</b>
+                    
+                    2.3.2 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../redis/redis-scene.html">
+            
+                <a href="../redis/redis-scene.html">
+            
+                    
+                        <b>1.3.4.3.</b>
+                    
+                    2.3.3 应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../mongo/SUMMARY.html">
+            
+                <a href="../mongo/SUMMARY.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    3.1 安装配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../mongo/mongo-windos-install.html">
+            
+                <a href="../mongo/mongo-windos-install.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    3.1.1 windos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../mongo/mongo-ubuntu-install.html">
+            
+                <a href="../mongo/mongo-ubuntu-install.html">
+            
+                    
+                        <b>1.4.1.2.</b>
+                    
+                    3.1.2 ubuntu 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../mongo/mongo-centos-install.html">
+            
+                <a href="../mongo/mongo-centos-install.html">
+            
+                    
+                        <b>1.4.1.3.</b>
+                    
+                    3.1.3 centos 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../mongo/mongo-auth.html">
+            
+                <a href="../mongo/mongo-auth.html">
+            
+                    
+                        <b>1.4.1.4.</b>
+                    
+                    3.1.4 权限分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../mongo/mongodb-mysql.html">
+            
+                <a href="../mongo/mongodb-mysql.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    3.2 数据操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../mongo/mongodb-grammar.html">
+            
+                <a href="../mongo/mongodb-grammar.html">
+            
+                    
+                        <b>1.4.2.1.</b>
+                    
+                    3.2.1 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../mongo/mongodb-index.html">
+            
+                <a href="../mongo/mongodb-index.html">
+            
+                    
+                        <b>1.4.2.2.</b>
+                    
+                    3.2.2 索引部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../mongo/mongodb-export.html">
+            
+                <a href="../mongo/mongodb-export.html">
+            
+                    
+                        <b>1.4.2.3.</b>
+                    
+                    3.2.3 导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../mongo/pymongo.html">
+            
+                <a href="../mongo/pymongo.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    3.3 pymongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../mongo/mongoengine.html">
+            
+                <a href="../mongo/mongoengine.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    3.4 mongoengine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../mongo/mongoengine-connect.html">
+            
+                <a href="../mongo/mongoengine-connect.html">
+            
+                    
+                        <b>1.4.4.1.</b>
+                    
+                    3.4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../mongo/mongoengine-documents.html">
+            
+                <a href="../mongo/mongoengine-documents.html">
+            
+                    
+                        <b>1.4.4.2.</b>
+                    
+                    3.4.2 model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../mongo/mongoengine-document-instances.html">
+            
+                <a href="../mongo/mongoengine-document-instances.html">
+            
+                    
+                        <b>1.4.4.3.</b>
+                    
+                    3.4.3 应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.Elasticsearch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../elasticsearch/elasticsearch-introduce.html">
+            
+                <a href="../elasticsearch/elasticsearch-introduce.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    4.1 链接方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../elasticsearch/elasticsearch-connect.html">
+            
+                <a href="../elasticsearch/elasticsearch-connect.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    4.1 基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2.3 DQL语言 基础查询</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="dql&#x8BED;&#x8A00;---&#x5176;&#x4E00;">DQL&#x8BED;&#x8A00;   &#x5176;&#x4E00;</h3>
+<h4 id="&#x4E00;&#x3001;&#x57FA;&#x7840;&#x67E5;&#x8BE2;">&#x4E00;&#x3001;&#x57FA;&#x7840;&#x67E5;&#x8BE2;</h4>
+<ul>
+<li><pre><code>- SELECT &#x67E5;&#x8BE2;&#x5217;&#x8868; FROM &#x8868;&#x540D;; 
+- &#x67E5;&#x8BE2;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x6BB5;&#x3001;&#x5E38;&#x91CF;&#x3001;&#x51FD;&#x6570;&#x3001;&#x8868;&#x8FBE;&#x5F0F;
+- &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x8868;
+</code></pre></li>
+<li><p><b>&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x5B57;&#x6BB5; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;
+</code></pre>
+</li>
+<li><p><b> &#x67E5;&#x8BE2;&#x591A;&#x4E2A;&#x5B57;&#x6BB5; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x5B57;&#x6BB5;&#x540D;,&#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;
+</code></pre>
+</li>
+<li><p><b> &#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5B57;&#x6BB5;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;
+</code></pre>
+</li>
+<li><p><b> &#x67E5;&#x8BE2;&#x5E38;&#x91CF;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x5E38;&#x91CF;&#x503C;;
+
+&#x6CE8;&#x610F;&#xFF1A;&#x5B57;&#x7B26;&#x578B;&#x548C;&#x65E5;&#x671F;&#x578B;&#x7684;&#x5E38;&#x91CF;&#x503C;&#x5FC5;&#x987B;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;&#xFF0C;&#x6570;&#x503C;&#x578B;&#x4E0D;&#x9700;&#x8981;
+</code></pre>
+</li>
+<li><p><b> &#x67E5;&#x8BE2;&#x51FD;&#x6570; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x51FD;&#x6570;&#x540D;(&#x5B9E;&#x53C2;&#x5217;&#x8868;);
+</code></pre>
+</li>
+<li><p><b> &#x67E5;&#x8BE2;&#x8868;&#x8FBE;&#x5F0F;  </b></p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> <span class="hljs-number">100</span>/<span class="hljs-number">25</span>;
+</code></pre>
+</li>
+<li><p><b> &#x8D77;&#x522B;&#x540D;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">AS</span> <span class="hljs-string">&quot;&#x522B;&#x540D;&quot;</span> <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;
+
+&#x6CE8;&#x610F;&#xFF1A;&#x522B;&#x540D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x5F15;&#x8D77;
+&#x6765;&#x5F53;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565;
+&#x5F15;&#x53F7;&#x5F53;&#x6709;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#x4E14;&#x6709;&#x7A7A;&#x683C;&#x6216;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x65F6;&#xFF0C;&#x4E0D;
+&#x80FD;&#x7701;&#x7565;AS&#x53EF;&#x4EE5;&#x7701;&#x7565;
+</code></pre>
+</li>
+<li><p><b> &#x53BB;&#x91CD;&#x590D;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;
+</code></pre>
+</li>
+<li><p><b> &#x505A;&#x52A0;&#x6CD5;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x6570;&#x503C;+&#x6570;&#x503C;; &#x76F4;&#x63A5;&#x8FD0;&#x7B97;
+<span class="hljs-keyword">SELECT</span> &#x5B57;&#x7B26;+&#x6570;&#x503C;; &#x9996;&#x5148;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x8F6C;&#x6362;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#x679C;&#x8F6C;&#x6362;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x7136;&#x540E;&#x7EE7;&#x7EED;&#x8FD0;&#x7B97;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-literal">NULL</span>+&#x6570;&#x503C;; NULL&#x548C;&#x4EFB;&#x4F55;&#x6570;&#x503C;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x90FD;&#x662F;NULL
+</code></pre>
+</li>
+<li><p><b>&#x3010;&#x8865;&#x5145;&#x3011;ifnull&#x51FD;&#x6570;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">IFNULL</span>(&#x5B57;&#x6BB5;&#x540D;, &#x6307;&#x5B9A;&#x503C;) <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;; &#x5224;
+
+&#x65AD;&#x67D0;&#x5B57;&#x6BB5;&#x6216;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x5426;&#x4E3A;null&#xFF0C;&#x5982;&#x679C;&#x4E3A;null&#xFF0C;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x539F;&#x672C;&#x7684;&#x503C;
+</code></pre>
+</li>
+<li><p><b>&#x3010;&#x8865;&#x5145;&#x3011;isnull&#x51FD;&#x6570;  </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ISNULL</span>(&#x5B57;&#x6BB5;&#x540D;) <span class="hljs-keyword">FROM</span> &#x8868;&#x540D;;&#x5224;
+
+&#x65AD;&#x67D0;&#x5B57;&#x6BB5;&#x6216;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x5426;&#x4E3A;null&#xFF0C;&#x5982;&#x679C;&#x662F;null&#xFF0C;&#x5219;&#x8FD4;&#x56DE;1&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E8C;&#x3001;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;">&#x4E8C;&#x3001;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;</h4>
+<ul>
+<li><p><b>&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&gt;   &gt;=    &lt;    &lt;=    =   &lt;=&gt;   !=   &lt;&gt; </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&gt;12000&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;
+SELECT FROM employees WHERE salary &gt; 12000 ;
+</code></pre>
+</li>
+<li><p><b>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;and&#x3001;or&#x3001;not </b></p>
+<pre><code class="lang-mysql">&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&gt;12000 and &#x5DE5;&#x8D44;&lt;18000&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F; 
+SELECT FROM employees WHERE salary &gt; 12000 AND salary &lt; 18000 ;
+
+&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&lt;=12000||&#x5DE5;&#x8D44;&gt;=18000&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;
+SELECT FROM employees WHERE salary &gt; 12000 OR salary &lt; 18000 ;
+
+&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&lt;=12000||&#x5DE5;&#x8D44;&gt;=18000&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;
+SELECT * FROM employees WHERE NOT (salary &gt; 12000 AND salary &lt; 18000) ;
+</code></pre>
+</li>
+<li><p><b>like&#xFF1A;%&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x3001;_&#x4EFB;&#x610F;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;escape&#x8F6C;&#x4E49;</b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x540D;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E3A;B&#x3001;&#x7B2C;&#x56DB;&#x4E2A;&#x5B57;&#x7B26;&#x4E3A;d&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F; 
+<span class="hljs-keyword">SELECT</span>  * <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">WHERE</span> last_name <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&apos;B__d%&apos;</span> ;
+</code></pre>
+</li>
+<li><p><b> between and </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7F16;&#x53F7;&#x5728;100&#x5230;120&#x4E4B;&#x95F4;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F; 
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">WHERE</span> employee_id <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">100</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">120</span> ;
+</code></pre>
+</li>
+<li><p><b> NOT BETWEEN 100 AND   120 </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7F16;&#x53F7;&#x4E0D;&#x5728;100&#x5230;120&#x4E4B;&#x95F4;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">WHERE</span> employee_id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">100</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">120</span> ;
+</code></pre>
+</li>
+<li><p><b>IN  </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7684;&#x5DE5;&#x79CD;&#x7F16;&#x53F7;&#x662F; IT_PROG&#x3001;AD_VP&#x3001;AD_PRES&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5458;&#x5DE5;&#x540D;&#x548C;&#x5DE5;&#x79CD;&#x7F16;&#x53F7; 
+<span class="hljs-keyword">SELECT</span> last_name,  job_id <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">WHERE</span> job_id <span class="hljs-keyword">IN</span> (<span class="hljs-string">&apos;IT_PROT&apos;</span>, <span class="hljs-string">&apos;AD_VP&apos;</span>, <span class="hljs-string">&apos;AD_PRES&apos;</span>) ;
+
+in&#x5217;&#x8868;&#x7684;&#x503C;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E00;&#x81F4;&#x6216;&#x517C;&#x5BB9;&#xFF0C;in&#x5217;&#x8868;&#x4E2D;&#x4E0D;&#x652F;&#x6301;&#x901A;&#x914D;&#x7B26;%&#x548C;_
+</code></pre>
+</li>
+<li><p><b> IS NULL  </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x6CA1;&#x6709;&#x5956;&#x91D1;&#x7684;&#x5458;&#x5DE5;&#x540D;&#x548C;&#x5956;&#x91D1;&#x7387;
+<span class="hljs-keyword">SELECT</span> last_name, commission_pct <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">WHERE</span> commission_pct <span class="hljs-keyword">IS</span> <span class="hljs-literal">NULL</span> ;
+</code></pre>
+</li>
+<li><p><b> IS NOT NULL </b></p>
+<pre><code class="lang-sql">SELECT  last_name,  commission_pct FROM  employees WHERE commission_pct IS NOT NULL ;
+
+=&#x3001;!=&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x5224;&#x65AD;NULL
+&lt;=&gt;&#x3001;is null &#x3001;is not null&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5224;&#x65AD;NULL
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x4E09;&#x3001;&#x6392;&#x5E8F;&#x67E5;&#x8BE2;">&#x4E09;&#x3001;&#x6392;&#x5E8F;&#x67E5;&#x8BE2;</h3>
+<ul>
+<li><pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span>  &#x67E5;&#x8BE2;&#x5217;&#x8868; <span class="hljs-keyword">FROM</span>  &#x8868; &#x3010;<span class="hljs-keyword">WHERE</span> &#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x3011;<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> &#x6392;&#x5E8F;&#x5217;&#x8868; &#x3010;<span class="hljs-keyword">asc</span> | <span class="hljs-keyword">desc</span>&#x3011; ;
+
+&#x6392;&#x5E8F;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x662F;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x3001;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x3001;&#x522B;&#x540D;&#x3001;&#x51FD;&#x6570;&#x3001;&#x8868;&#x8FBE;&#x5F0F;
+asc&#x4EE3;&#x8868;&#x5347;&#x5E8F;&#xFF0C;desc&#x4EE3;&#x8868;&#x964D;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5199;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;asc
+order by&#x7684;&#x4F4D;&#x7F6E;&#x4E00;&#x822C;&#x653E;&#x5728;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x7684;&#x6700;&#x540E;&#xFF08;&#x9664;limit&#x8BED;&#x53E5;&#x4E4B;&#x5916;&#xFF09;
+</code></pre>
+</li>
+<li><p><b> ORDER BY ... DESC  </b></p>
+<pre><code class="lang-sql">&#x6309;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x6392;&#x5E8F;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x6C42;&#x6309;&#x5DE5;&#x8D44;&#x964D;&#x5E8F;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">FROM</span> employees <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span> ;
+
+&#x6309;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x67E5;&#x8BE2;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x6C42;&#x5148;&#x6309;&#x5DE5;&#x8D44;&#x964D;&#x5E8F;&#xFF0C;&#x518D;&#x6309;&#x5458;&#x5DE5;&#x7F16;&#x53F7;&#x5347;&#x5E8F;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span>  employees <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span>, employee_id <span class="hljs-keyword">ASC</span> ;
+
+&#x6309;&#x522B;&#x540D;&#x6392;&#x5E8F;&#x67E5;&#x8BE2;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x6C42;&#x6309;&#x5458;&#x5DE5;&#x5E74;&#x85AA;&#x5347;&#x5E8F;
+<span class="hljs-keyword">SELECT</span>  *,  salary * <span class="hljs-number">12</span> * (<span class="hljs-number">1</span>+ <span class="hljs-keyword">IFNULL</span>(commission_pct, <span class="hljs-number">0</span>)) &#x5E74;&#x85AA; <span class="hljs-keyword">FROM</span>  employees <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> &#x5E74;&#x85AA; <span class="hljs-keyword">ASC</span> ;
+
+&#x6309;&#x51FD;&#x6570;&#x6392;&#x5E8F;&#x67E5;&#x8BE2;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x6C42;&#x6309;&#x5458;&#x5DE5;&#x540D;&#x5B57;&#x7684;&#x957F;&#x5EA6;&#x964D;&#x5E8F;
+<span class="hljs-keyword">SELECT</span>  <span class="hljs-keyword">LENGTH</span>(last_name),  last_name <span class="hljs-keyword">FROM</span>  employees <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">LENGTH</span>(last_name) <span class="hljs-keyword">DESC</span> ;
+
+&#x6309;&#x8868;&#x8FBE;&#x5F0F;&#x6392;&#x5E8F;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#xFF0C;&#x8981;&#x6C42;&#x6309;&#x5458;&#x5DE5;&#x5E74;&#x85AA;&#x5347;&#x5E8F;
+<span class="hljs-keyword">SELECT</span>  *, salary * <span class="hljs-number">12</span> * (<span class="hljs-number">1</span>+ <span class="hljs-keyword">IFNULL</span>(commission_pct, <span class="hljs-number">0</span>)) <span class="hljs-keyword">FROM</span>  employees <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary * <span class="hljs-number">12</span> * (<span class="hljs-number">1</span>+ <span class="hljs-keyword">IFNULL</span>(commission_pct, <span class="hljs-number">0</span>)) <span class="hljs-keyword">ASC</span> ;
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x56DB;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;">&#x56DB;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</h3>
+<ul>
+<li><pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x51FD;&#x6570;&#x540D;(&#x5B9E;&#x53C2;&#x5217;&#x8868;) &#x3010;<span class="hljs-keyword">FROM</span> &#x8868;&#x3011;;
+</code></pre>
+</li>
+<li><p><b>concat  &#x8FDE;&#x63A5;&#x5B57;&#x7B26; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">CONCAT</span>(<span class="hljs-string">&apos;Hello&apos;</span>,<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;World&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>substr &#x622A;&#x53D6;&#x5B50;&#x4E32; </b> </p>
+<pre><code class="lang-sql">&#x622A;&#x53D6;&#x4ECE;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x540E;&#x9762;&#x6240;&#x6709;&#x5B57;&#x7B26;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">SUBSTR</span>(<span class="hljs-string">&apos;&#x674E;&#x83AB;&#x6101;&#x7231;&#x4E0A;&#x4E86;&#x9646;&#x5C55;&#x5143;&apos;</span>,<span class="hljs-number">7</span>)  <span class="hljs-keyword">AS</span> out_put;
+
+&#x622A;&#x53D6;&#x4ECE;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5904;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">SUBSTR</span>(<span class="hljs-string">&apos;&#x674E;&#x83AB;&#x6101;&#x7231;&#x4E0A;&#x4E86;&#x9646;&#x5C55;&#x5143;&apos;</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>replace  &#x66FF;&#x6362;&#x5B57;&#x7B26;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">REPLACE</span>(<span class="hljs-string">&apos;&#x5F20;&#x65E0;&#x5FCC;&#x7231;&#x4E0A;&#x4E86;&#x5468;&#x82B7;&#x82E5;&apos;</span>,<span class="hljs-string">&apos;&#x5468;&#x82B7;&#x82E5;&apos;</span>,<span class="hljs-string">&apos;&#x8D75;&#x654F;&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>upper &#x53D8;&#x5927;&#x5199; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">UPPER</span>(<span class="hljs-string">&apos;john&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>lower  &#x53D8;&#x5C0F;&#x5199; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">LOWER</span>(<span class="hljs-string">&apos;john&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>lpad  &#x5DE6;&#x586B;&#x5145; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">LPAD</span>(<span class="hljs-string">&apos;&#x6BB7;&#x7D20;&#x7D20;&apos;</span>,<span class="hljs-number">10</span>,<span class="hljs-string">&apos;*&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>rpad &#x53F3;&#x586B;&#x5145; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">LPAD</span>(<span class="hljs-string">&apos;&#x6BB7;&#x7D20;&#x7D20;&apos;</span>,<span class="hljs-number">10</span>,<span class="hljs-string">&apos;*&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>length &#x83B7;&#x53D6;&#x5B57;&#x8282;&#x957F;&#x5EA6; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">LENGTH</span>(<span class="hljs-string">&apos;john&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>trim &#x53BB;&#x9664;&#x524D;&#x540E;&#x7A7A;&#x683C;</b> </p>
+<pre><code class="lang-sql">&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x7684;&#x5DE6;&#x53F3;&#x7A7A;&#x683C;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">LENGTH</span>(<span class="hljs-keyword">TRIM</span>(<span class="hljs-string">&apos;    &#x5F20;&#x7FE0;&#x5C71;    &apos;</span>)) <span class="hljs-keyword">AS</span> out_put;
+
+&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x7684;&#x6307;&#x5B9A;&#x5B57;&#x7B26;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">TRIM</span>(<span class="hljs-string">&apos;aaa&apos;</span> <span class="hljs-keyword">FROM</span> <span class="hljs-string">&apos;aaaaaaaaa&#x5F20;&#x7FE0;&#x5C71;aaaaaaaaa&apos;</span>)  <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>instr &#x83B7;&#x53D6;&#x5B50;&#x4E32;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x7D22;&#x5F15; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">INSTR</span>(<span class="hljs-string">&apos;&#x6768;&#x4E0D;&#x6094;&#x7231;&#x4E0A;&#x4E86;&#x6BB7;&#x516D;&#x4FA0;&apos;</span>,<span class="hljs-string">&apos;&#x6BB7;&#x516D;&#x4FA0;&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+
+&#x8FD4;&#x56DE;&#x5B50;&#x4E32;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x8FD4;&#x56DE;0
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x4E94;&#x3001;-&#x6570;&#x5B66;&#x51FD;&#x6570;">&#x4E94;&#x3001; &#x6570;&#x5B66;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><b>round  &#x56DB;&#x820D;&#x4E94;&#x5165;</b> </p>
+<pre><code class="lang-sql">&#x9ED8;&#x8BA4;&#x56DB;&#x820D;&#x4E94;&#x5165;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ROUND</span>(<span class="hljs-number">-1.55</span>) <span class="hljs-keyword">AS</span> out_put;
+
+&#x6307;&#x5B9A;&#x5C0F;&#x6570;&#x4F4D;&#x6570;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ROUND</span>(<span class="hljs-number">1.567</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">AS</span> out_put;
+
+&#x56DB;&#x820D;&#x4E94;&#x5165;&#x548C;&#x7B26;&#x53F7;&#x65E0;&#x5173;
+</code></pre>
+</li>
+<li><p><b>ceil  &#x5411;&#x4E0A;&#x53D6;&#x6574; </b> </p>
+<pre><code class="lang-sql">SELECT CEIL(-1.02) AS out_put;
+
+&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x8FD4;&#x56DE;&gt;=&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x6700;&#x5C0F;&#x6574;&#x6570;
+</code></pre>
+</li>
+<li><p><b>floor &#x5411;&#x4E0B;&#x53D6;&#x6574; </b> </p>
+<pre><code class="lang-sql">SELECT FLOOR(-9.99) AS out_put;
+
+&#x5411;&#x4E0B;&#x53D6;&#x6574;&#xFF0C;&#x8FD4;&#x56DE;&lt;=&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x6700;&#x5927;&#x6574;&#x6570;
+</code></pre>
+</li>
+<li><p><b>mod  &#x53D6;&#x6A21;&#x8FD0;&#x7B97;&#xFF08;a-a/b*b&#xFF09; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MOD</span>(<span class="hljs-number">10</span>,<span class="hljs-number">3</span>) <span class="hljs-keyword">AS</span> out_put
+</code></pre>
+</li>
+<li><p><b>truncate  &#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x7684;&#x4F4D;&#x6570;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x56DB;&#x820D;&#x4E94;&#x5165; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">TRUNCATE</span>(<span class="hljs-number">1.69999</span>,<span class="hljs-number">1</span>) <span class="hljs-keyword">AS</span> out_pu
+</code></pre>
+</li>
+<li><p><b>rand  &#x83B7;&#x53D6;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;0-1&#x4E4B;&#x95F4;&#x7684;&#x5C0F;&#x6570; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">RAND</span>() <span class="hljs-keyword">AS</span> out_put
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x516D;&#x3001;-&#x65E5;&#x671F;&#x51FD;&#x6570;">&#x516D;&#x3001; &#x65E5;&#x671F;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><b>now  &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65E5;&#x671F;+&#x65F6;&#x95F4; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">NOW</span>() <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>curdate  &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65E5;&#x671F; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">CURDATE</span>() <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>curtime  &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65F6;&#x95F4; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">CURTIME</span>() <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>year &#x8FD4;&#x56DE;&#x5E74;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">YEAR</span>(<span class="hljs-keyword">NOW</span>()) &#x5E74;;
+</code></pre>
+</li>
+<li><p><b>month   &#x8FD4;&#x56DE;&#x6708;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MONTH</span>(<span class="hljs-keyword">NOW</span>()) &#x6708;;
+</code></pre>
+</li>
+<li><p><b>day    &#x8FD4;&#x56DE;&#x65E5;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DAY</span>(<span class="hljs-keyword">NOW</span>()) &#x65E5;;
+</code></pre>
+</li>
+<li><p><b>hour   &#x5C0F;&#x65F6;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">HOUR</span>(<span class="hljs-keyword">NOW</span>()) &#x65F6;;
+</code></pre>
+</li>
+<li><p><b>minute   &#x5206;&#x949F;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MINUTE</span>(<span class="hljs-keyword">NOW</span>()) &#x5206;;
+</code></pre>
+</li>
+<li><p><b>second   &#x79D2; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">SECOND</span>(<span class="hljs-keyword">NOW</span>()) &#x79D2;;
+</code></pre>
+</li>
+<li><p><b>monthname  &#x4EE5;&#x82F1;&#x6587;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x6708;</b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> MONTHNAME(<span class="hljs-keyword">NOW</span>()) &#x6708;&#x540D;;
+</code></pre>
+</li>
+<li><p><b>datediff    &#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x65E5;&#x671F;&#x76F8;&#x5DEE;&#x7684;&#x5929;&#x6570; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DATEDIFF</span>(<span class="hljs-string">&apos;1995-2-7&apos;</span>,<span class="hljs-string">&apos;1995-2-6&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>date_format   &#x5C06;&#x65E5;&#x671F;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DATE_FORMAT</span>(<span class="hljs-keyword">NOW</span>(),<span class="hljs-string">&apos;%Y&#x5E74;%m&#x6708;%d&#x65E5;&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>str_to_date     &#x5C06;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x6210;&#x65E5;&#x671F; </b> </p>
+<pre><code class="lang-sql">&#x683C;&#x5F0F;&#x7B26;&#xFF1A;
+%Y&#xFF1A;&#x56DB;&#x4F4D;&#x7684;&#x5E74;&#x4EFD;
+%y&#xFF1A;&#x4E8C;&#x4F4D;&#x7684;&#x5E74;&#x4EFD;
+%m&#xFF1A;&#x4E8C;&#x4F4D;&#x7684;&#x6708;&#x4EFD;&#xFF08;01&#xFF0C;02&#xFF0C;...&#xFF0C;12&#xFF09;
+%c&#xFF1A;&#x4E00;&#x4F4D;&#x7684;&#x6708;&#x4EFD;&#xFF08;1&#xFF0C;2&#xFF0C;...&#xFF0C;12&#xFF09;
+%d&#xFF1A;&#x65E5;&#xFF08;01&#xFF0C;02&#xFF0C;...&#xFF0C;31&#xFF09;
+%H&#xFF1A;&#x5C0F;&#x65F6;&#xFF08;24&#x5C0F;&#x65F6;&#x5236;&#xFF09;
+%h&#xFF1A;&#x5C0F;&#x65F6;&#xFF08;12&#x5C0F;&#x65F6;&#x5236;&#xFF09;
+%i&#xFF1A;&#x5206;&#x949F;&#xFF08;00&#xFF0C;01&#xFF0C;02&#xFF0C;...&#xFF0C;59&#xFF09;
+%s&#xFF1A;&#x79D2;&#xFF08;00&#xFF0C;01&#xFF0C;02&#xFF0C;...&#xFF0C;59&#xFF09;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">STR_TO_DATE</span>(<span class="hljs-string">&apos;1998-3-2&apos;</span>,<span class="hljs-string">&apos;%Y-%c-%d&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x4E03;&#x3001;-&#x63A7;&#x5236;&#x51FD;&#x6570;">&#x4E03;&#x3001; &#x63A7;&#x5236;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><b>if  &#x5224;&#x65AD;&#x51FD;&#x6570; </b> </p>
+<pre><code class="lang-sql">IF(&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;1&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;2)&#xFF1A;
+&#x5982;&#x679C;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE;&#x8868;&#x8FBE;&#x5F0F;1&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x8868;&#x8FBE;&#x5F0F;2
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">IF</span>(<span class="hljs-number">10</span> &lt; <span class="hljs-number">5</span>, <span class="hljs-string">&apos;&#x5927;&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&apos;</span>) <span class="hljs-keyword">AS</span> out_put;
+</code></pre>
+</li>
+<li><p><b>case &#x5206;&#x652F;&#x51FD;&#x6570; </b></p>
+<font color="red"><b>case&#x7684;&#x683C;&#x5F0F;&#x4E00;</b></font>
+
+<pre><code class="lang-sql">CASE &#x53D8;&#x91CF;&#x6216;&#x5B57;&#x6BB5;&#x6216;&#x8868;&#x8FBE;&#x5F0F; 
+    WHEN &#x5E38;&#x91CF;1 THEN &#x503C;1 
+    WHEN &#x5E38;&#x91CF;2 THEN &#x503C;2
+    ...
+ELSE &#x503C;n 
+<span class="hljs-keyword">END</span> ;
+
+&#x6848;&#x4F8B;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7684;&#x5DE5;&#x8D44;&#xFF0C;&#x8981;&#x6C42;
+    &#x90E8;&#x95E8;&#x53F7;=30&#xFF0C;&#x663E;&#x793A;&#x7684;&#x5DE5;&#x8D44;&#x4E3A;1.1&#x500D;
+    &#x90E8;&#x95E8;&#x53F7;=40&#xFF0C;&#x663E;&#x793A;&#x7684;&#x5DE5;&#x8D44;&#x4E3A;1.2&#x500D;
+    &#x90E8;&#x95E8;&#x53F7;=50&#xFF0C;&#x663E;&#x793A;&#x7684;&#x5DE5;&#x8D44;&#x4E3A;1.3&#x500D;
+    &#x5176;&#x5B83;&#x90E8;&#x95E8;&#xFF0C;&#x663E;&#x793A;&#x7684;&#x5DE5;&#x8D44;&#x4E3A;&#x539F;&#x5DE5;&#x8D44;
+
+<span class="hljs-keyword">SELECT</span> 
+  salary &#x539F;&#x59CB;&#x5DE5;&#x8D44;,
+  department_id,
+  <span class="hljs-keyword">CASE</span>
+    department_id 
+    <span class="hljs-keyword">WHEN</span> <span class="hljs-number">30</span> <span class="hljs-keyword">THEN</span> salary * <span class="hljs-number">1.1</span> 
+    <span class="hljs-keyword">WHEN</span> <span class="hljs-number">40</span> <span class="hljs-keyword">THEN</span> salary * <span class="hljs-number">1.2</span> 
+    <span class="hljs-keyword">WHEN</span> <span class="hljs-number">50</span> <span class="hljs-keyword">THEN</span> salary * <span class="hljs-number">1.3</span> 
+    <span class="hljs-keyword">ELSE</span> salary 
+  <span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> &#x65B0;&#x5DE5;&#x8D44; 
+<span class="hljs-keyword">FROM</span>
+  employees ;
+</code></pre>
+<font color="red"><b>case&#x7684;&#x683C;&#x5F0F;&#x4E8C;</b></font>
+
+<pre><code class="lang-sql">CASE
+    WHEN &#x6761;&#x4EF6;1 THEN &#x503C;1 
+    WHEN &#x6761;&#x4EF6;2 THEN &#x503C;2
+    ...
+    ELSE &#x503C;n 
+<span class="hljs-keyword">END</span>
+
+&#x6848;&#x4F8B;&#xFF1A;&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x7684;&#x5DE5;&#x8D44;&#x60C5;&#x51B5;
+    &#x5982;&#x679C;&#x5DE5;&#x8D44;&gt;<span class="hljs-number">20000</span>&#xFF0C;&#x663E;&#x793A;A&#x7EA7;&#x522B;
+    &#x5982;&#x679C;&#x5DE5;&#x8D44;&gt;<span class="hljs-number">15000</span>&#xFF0C;&#x663E;&#x793A;B&#x7EA7;&#x522B;
+    &#x5982;&#x679C;&#x5DE5;&#x8D44;&gt;<span class="hljs-number">10000</span>&#xFF0C;&#x663E;&#x793A;C&#x7EA7;&#x522B;
+    &#x5426;&#x5219;&#xFF0C;&#x663E;&#x793A;D&#x7EA7;&#x522B;
+
+<span class="hljs-keyword">SELECT</span> 
+  salary,
+  <span class="hljs-keyword">CASE</span>
+    <span class="hljs-keyword">WHEN</span> salary &gt; <span class="hljs-number">20000</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;A&apos;</span> 
+    <span class="hljs-keyword">WHEN</span> salary &gt; <span class="hljs-number">15000</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;B&apos;</span> 
+    <span class="hljs-keyword">WHEN</span> salary &gt; <span class="hljs-number">10000</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;C&apos;</span> 
+    <span class="hljs-keyword">ELSE</span> <span class="hljs-string">&apos;D&apos;</span> 
+  <span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> &#x5DE5;&#x8D44;&#x7EA7;&#x522B; 
+<span class="hljs-keyword">FROM</span>
+  employees ;
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x516B;&#x3001;-&#x5176;&#x5B83;&#x51FD;&#x6570;">&#x516B;&#x3001; &#x5176;&#x5B83;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><b>version   &#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7248;&#x672C; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">VERSION</span>();
+</code></pre>
+</li>
+<li><p><b>database   &#x5F53;&#x524D;&#x6253;&#x5F00;&#x7684;&#x6570;&#x636E;&#x5E93; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DATABASE</span>();
+</code></pre>
+</li>
+<li><p><b>user  &#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">USER</span>();
+</code></pre>
+</li>
+<li><p><b>password(&#x2018;&#x5B57;&#x7B26;&#x2019;)  &#x8FD4;&#x56DE;&#x8BE5;&#x5B57;&#x7B26;&#x7684;&#x5BC6;&#x7801;&#x5F62;&#x5F0F;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">PASSWORD</span>(<span class="hljs-string">&apos;123456&apos;</span>);
+</code></pre>
+</li>
+<li><p><b>md5(&#x2018;&#x5B57;&#x7B26;&#x2019;)  &#x8FD4;&#x56DE;&#x8BE5;&#x5B57;&#x7B26;&#x7684;md5&#x52A0;&#x5BC6;&#x5F62;&#x5F0F;</b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MD5</span>(<span class="hljs-string">&apos;123456&apos;</span>);
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x4E5D;&#x3001;&#x5206;&#x7EC4;&#x51FD;&#x6570;">&#x4E5D;&#x3001;&#x5206;&#x7EC4;&#x51FD;&#x6570;</h3>
+<ul>
+<li><pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> &#x51FD;&#x6570;&#x540D;(&#x5B9E;&#x53C2;&#x5217;&#x8868;) &#x3010;<span class="hljs-keyword">FROM</span> &#x8868;&#x3011;;
+</code></pre>
+</li>
+</ul>
+<p>1&#x3001;sum&#x3001;avg&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x6570;&#x503C;&#x578B;&#xFF0C;max&#x3001;min&#x3001;count&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;
+   2&#x3001;&#x4EE5;&#x4E0A;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x90FD;&#x5FFD;&#x7565;null&#x503C;
+   3&#x3001;&#x53EF;&#x4EE5;&#x548C;distinct&#x642D;&#x914D;&#x5B9E;&#x73B0;&#x53BB;&#x91CD;&#x7684;&#x8FD0;&#x7B97;&#xFF1A;select sum(distinct &#x5B57;&#x6BB5;) from &#x8868;;
+   4&#x3001;&#x4E00;&#x822C;&#x4F7F;&#x7528;count(*)&#x7528;&#x4F5C;&#x7EDF;&#x8BA1;&#x884C;&#x6570;
+   5&#x3001;&#x548C;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x4E00;&#x540C;&#x67E5;&#x8BE2;&#x7684;&#x5B57;&#x6BB5;&#x8981;&#x6C42;&#x662F;group by&#x540E;&#x7684;&#x5B57;&#x6BB5;</p>
+<pre><code>
+- &lt;b&gt;sum   &#x6C42;&#x548C; &lt;/b&gt; 
+
+  ```sql
+  SELECT SUM(salary) FROM employees;
+</code></pre><ul>
+<li><p><b>avg    &#x5E73;&#x5747;&#x503C; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">AVG</span>(salary) <span class="hljs-keyword">FROM</span> employees;
+</code></pre>
+</li>
+<li><p><b>max  &#x6700;&#x5927;&#x503C; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MAX</span>(salary) <span class="hljs-keyword">FROM</span> employees;
+</code></pre>
+</li>
+<li><p><b>min   &#x6700;&#x5C0F;&#x503C; </b> </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MIN</span>(salary) <span class="hljs-keyword">FROM</span> employees;
+</code></pre>
+</li>
+<li><p><b>count &#x8BA1;&#x7B97;&#x4E2A;&#x6570; </b></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(salary) <span class="hljs-keyword">FROM</span> employees;
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x5341;&#x3001;&#x5206;&#x7EC4;&#x67E5;&#x8BE2;">&#x5341;&#x3001;&#x5206;&#x7EC4;&#x67E5;&#x8BE2;</h3>
+<ul>
+<li><pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 
+  &#x67E5;&#x8BE2;&#x5217;&#x8868; 
+<span class="hljs-keyword">FROM</span>
+  &#x8868; 
+&#x3010;<span class="hljs-keyword">where</span> &#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x3011; 
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> &#x5206;&#x7EC4;&#x7684;&#x5B57;&#x6BB5; 
+&#x3010;<span class="hljs-keyword">having</span> &#x5206;&#x7EC4;&#x540E;&#x7684;&#x7B5B;&#x9009;&#x3011;
+&#x3010;<span class="hljs-keyword">order</span> <span class="hljs-keyword">BY</span> &#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#x3011; ;
+</code></pre>
+<pre><code class="lang-sql">1&#x3001;&#x548C;&#x5206;&#x7EC4;&#x51FD;&#x6570;&#x4E00;&#x540C;&#x67E5;&#x8BE2;&#x7684;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x662F;group by&#x540E;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x6BB5;
+2&#x3001;&#x7B5B;&#x9009;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x5206;&#x7EC4;&#x524D;&#x7B5B;&#x9009;&#x548C;&#x5206;&#x7EC4;&#x540E;&#x7B5B;&#x9009;
+                 &#x9488;&#x5BF9;&#x7684;&#x8868;                 &#x8BED;&#x53E5;&#x4F4D;&#x7F6E;               &#x8FDE;&#x63A5;&#x7684;&#x5173;&#x952E;&#x5B57;
+    &#x5206;&#x7EC4;&#x524D;&#x7B5B;&#x9009;     &#x5206;&#x7EC4;&#x524D;&#x7684;&#x539F;&#x59CB;&#x8868;            group by&#x524D;            where
+    &#x5206;&#x7EC4;&#x540E;&#x7B5B;&#x9009;     &#x5206;&#x7EC4;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x96C6;            group by&#x540E;            having
+
+3&#x3001;&#x5206;&#x7EC4;&#x53EF;&#x4EE5;&#x6309;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;
+4&#x3001;&#x5206;&#x7EC4;&#x53EF;&#x4EE5;&#x642D;&#x914D;&#x7740;&#x6392;&#x5E8F;&#x4F7F;&#x7528;
+</code></pre>
+</li>
+<li><p><b>GROUP BY &#x5206;&#x7EC4;&#x7684;&#x5B57;&#x6BB5;  </b></p>
+<pre><code class="lang-sql">&#x67E5;&#x8BE2;&#x6BCF;&#x4E2A;&#x5DE5;&#x79CD;&#x7684;&#x5458;&#x5DE5;&#x5E73;&#x5747;&#x5DE5;&#x8D44; 
+SELECT AVG(salary),  job_id FROM  employees GROUP BY job_id ;
+
+&#x67E5;&#x8BE2;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x5458;&#x5DE5;&#x90E8;&#x95E8;&#x4E2A;&#x6570;
+SELECT COUNT(*),  location_id FROM  departments GROUP BY location_id ;
+
+&#x67E5;&#x8BE2;&#x6709;&#x5956;&#x91D1;&#x7684;&#x6BCF;&#x4E2A;&#x9886;&#x5BFC;&#x624B;&#x4E0B;&#x5458;&#x5DE5;&#x7684;&#x5E73;&#x5747;&#x5DE5;&#x8D44;
+SELECT AVG(salary), manager_id FROM  employees WHERE commission_pct IS NOT NULL GROUP BY manager_id ;
+
+&#x67E5;&#x8BE2;&#x54EA;&#x4E2A;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4E2A;&#x6570;&gt;5
+SELECT  COUNT(*),  department_id FROM  employees GROUP BY department_id HAVING COUNT(*) &gt; 5 ;
+
+&#x67E5;&#x8BE2;&#x6BCF;&#x4E2A;&#x5DE5;&#x79CD;&#x6709;&#x5956;&#x91D1;&#x7684;&#x5458;&#x5DE5;&#x7684;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&gt;6000&#x7684;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&#x548C;&#x516C;&#x4F17;&#x7F16;&#x53F7;&#xFF0C;&#x6309;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&#x5347;&#x5E8F;
+SELECT  MAX(salary) m,  job_id FROM employees WHERE commission_pct IS NOT NULL 
+GROUP BY job_id HAVING m &gt; 6000 ORDER BY m ;
+
+&#x67E5;&#x8BE2;&#x6BCF;&#x4E2A;&#x5DE5;&#x79CD;&#x6BCF;&#x4E2A;&#x90E8;&#x95E8;&#x7684;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x5E76;&#x6309;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x964D;&#x5E8F;
+SELECT  MIN(salary), job_id,  department_id FROM  employees GROUP BY job_id, department_id ORDER BY MIN(salary) DESC ;
+</code></pre>
+</li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mysql-dml.html" class="navigation navigation-prev " aria-label="Previous page: 1.2.2 DML语言 增删改语">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mysql-dql-join.html" class="navigation navigation-next " aria-label="Next page: 1.2.4 DQL语言 关联查询">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2.3 DQL语言 基础查询","level":"1.2.2.3","depth":3,"next":{"title":"1.2.4 DQL语言 关联查询","level":"1.2.2.4","depth":3,"path":"mysql/mysql-dql-join.md","ref":"mysql/mysql-dql-join.md","articles":[]},"previous":{"title":"1.2.2 DML语言 增删改语","level":"1.2.2.2","depth":3,"path":"mysql/mysql-dml.md","ref":"mysql/mysql-dml.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ad","hide-element","click-reveal","klipse","splitter","chapter-fold","search-plus","back-to-top-button","copy-code-button","-font-settings","-lunr","-search","search-pro","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ad":{"contentBottom":""},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"zhangjunbo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据库操作指南","language":"zh-hans","links":{"gitbook":false,"sharing":{"all":false,"vk":false,"facebook":false,"twitter":false,"google":false}},"gitbook":"*","description":"数据库操作指南"},"file":{"path":"mysql/mysql-dql.md","mtime":"2020-10-04T16:25:32.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-21T14:45:09.822Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ad/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
